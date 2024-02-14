@@ -1,0 +1,22 @@
+[
+  {
+    "ID": 0,
+    "Tipo": "Inverter"
+  },
+  {
+    "ID": 1,
+    "Tipo": "Mig"
+  },
+  {
+    "ID": 2,
+    "Tipo": "Plasmas"
+  },
+  {
+    "ID": 3,
+    "Tipo": "Pontos"
+  },
+  {
+    "ID": 4,
+    "Tipo": "Refrigeradores"
+  }
+]

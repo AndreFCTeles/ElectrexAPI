@@ -1,0 +1,226 @@
+[
+  {
+    "ID": 0,
+    "Avaria": "Alça"
+  },
+  {
+    "ID": 1,
+    "Avaria": "Amperimetro"
+  },
+  {
+    "ID": 2,
+    "Avaria": "Atualização firmware"
+  },
+  {
+    "ID": 3,
+    "Avaria": "Cabo de alimentação"
+  },
+  {
+    "ID": 4,
+    "Avaria": "Cabo interligaçao"
+  },
+  {
+    "ID": 5,
+    "Avaria": "Circuito Frontal"
+  },
+  {
+    "ID": 6,
+    "Avaria": "Circuito HF"
+  },
+  {
+    "ID": 7,
+    "Avaria": "Circuito controlo"
+  },
+  {
+    "ID": 8,
+    "Avaria": "Circuito controlo frontal display"
+  },
+  {
+    "ID": 9,
+    "Avaria": "Circuito de potencia"
+  },
+  {
+    "ID": 10,
+    "Avaria": "Circuito fonte de alimentação"
+  },
+  {
+    "ID": 11,
+    "Avaria": "Circuito frontal"
+  },
+  {
+    "ID": 12,
+    "Avaria": "Comutador 4 Pos"
+  },
+  {
+    "ID": 13,
+    "Avaria": "Comutador 7 Pos"
+  },
+  {
+    "ID": 14,
+    "Avaria": "Controlador"
+  },
+  {
+    "ID": 15,
+    "Avaria": "Diodo Secundário"
+  },
+  {
+    "ID": 16,
+    "Avaria": "Diodos secundario"
+  },
+  {
+    "ID": 17,
+    "Avaria": "Electroválvula"
+  },
+  {
+    "ID": 18,
+    "Avaria": "Encoder"
+  },
+  {
+    "ID": 19,
+    "Avaria": "Filtro MS"
+  },
+  {
+    "ID": 20,
+    "Avaria": "Flat Cable"
+  },
+  {
+    "ID": 21,
+    "Avaria": "IGBT"
+  },
+  {
+    "ID": 22,
+    "Avaria": "Inductância"
+  },
+  {
+    "ID": 23,
+    "Avaria": "Indutância"
+  },
+  {
+    "ID": 24,
+    "Avaria": "Interface"
+  },
+  {
+    "ID": 25,
+    "Avaria": "Microcontrolador"
+  },
+  {
+    "ID": 26,
+    "Avaria": "Motor do fio"
+  },
+  {
+    "ID": 27,
+    "Avaria": "Outros"
+  },
+  {
+    "ID": 28,
+    "Avaria": "Painel Frontal"
+  },
+  {
+    "ID": 29,
+    "Avaria": "Painel Tr."
+  },
+  {
+    "ID": 30,
+    "Avaria": "Pistas e outros componentes"
+  },
+  {
+    "ID": 31,
+    "Avaria": "Ponte"
+  },
+  {
+    "ID": 32,
+    "Avaria": "Ponte rectificadora"
+  },
+  {
+    "ID": 33,
+    "Avaria": "Potenciometro"
+  },
+  {
+    "ID": 34,
+    "Avaria": "Potênciometro I2"
+  },
+  {
+    "ID": 35,
+    "Avaria": "Radiador"
+  },
+  {
+    "ID": 36,
+    "Avaria": "Relé 12VDC"
+  },
+  {
+    "ID": 37,
+    "Avaria": "Relé 48VDC"
+  },
+  {
+    "ID": 38,
+    "Avaria": "Reparação de tocha"
+  },
+  {
+    "ID": 39,
+    "Avaria": "Resistência Cerâmica"
+  },
+  {
+    "ID": 40,
+    "Avaria": "Sem defeito"
+  },
+  {
+    "ID": 41,
+    "Avaria": "Sensor hall"
+  },
+  {
+    "ID": 42,
+    "Avaria": "Sub. Módulo"
+  },
+  {
+    "ID": 43,
+    "Avaria": "Sub. Painel Fr"
+  },
+  {
+    "ID": 44,
+    "Avaria": "Sub. Painel Tr"
+  },
+  {
+    "ID": 45,
+    "Avaria": "Subst. Electrovalvula"
+  },
+  {
+    "ID": 46,
+    "Avaria": "Tocha"
+  },
+  {
+    "ID": 47,
+    "Avaria": "Tomadas"
+  },
+  {
+    "ID": 48,
+    "Avaria": "Transf. queimado"
+  },
+  {
+    "ID": 49,
+    "Avaria": "Transformador C.I."
+  },
+  {
+    "ID": 50,
+    "Avaria": "Transformador Impulsos"
+  },
+  {
+    "ID": 51,
+    "Avaria": "Transformador Potência"
+  },
+  {
+    "ID": 52,
+    "Avaria": "Transformador auxiliar"
+  },
+  {
+    "ID": 53,
+    "Avaria": "Transistor IGBT"
+  },
+  {
+    "ID": 54,
+    "Avaria": "Térmico"
+  },
+  {
+    "ID": 55,
+    "Avaria": "Ventilador"
+  }
+]

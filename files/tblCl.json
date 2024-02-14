@@ -1,0 +1,110 @@
+[
+  {
+    "Circuito": "CI ACDC CONTROL"
+  },
+  {
+    "Circuito": "CI ACDC CONTROL V2"
+  },
+  {
+    "Circuito": "CI ACDC RELAY"
+  },
+  {
+    "Circuito": "CI Amp/Volt SMD"
+  },
+  {
+    "Circuito": "CI CAP MONOMIG"
+  },
+  {
+    "Circuito": "CI Controlo AF TIG"
+  },
+  {
+    "Circuito": "CI Frontal MIG300SI"
+  },
+  {
+    "Circuito": "CI INV ACDC FRONT"
+  },
+  {
+    "Circuito": "CI INV DC 500 FROMT"
+  },
+  {
+    "Circuito": "CI INV DC FRONT"
+  },
+  {
+    "Circuito": "CI INV TP AUX POWER"
+  },
+  {
+    "Circuito": "CI INV TP CONTROL"
+  },
+  {
+    "Circuito": "CI INV TP FRONT"
+  },
+  {
+    "Circuito": "CI INV TRI DC FRONT"
+  },
+  {
+    "Circuito": "CI INV TRI TP FRONT"
+  },
+  {
+    "Circuito": "CI INV VRD"
+  },
+  {
+    "Circuito": "CI Inv Mig Control"
+  },
+  {
+    "Circuito": "CI LTRONIC CONTROL"
+  },
+  {
+    "Circuito": "CI LTRONIC FRONT"
+  },
+  {
+    "Circuito": "CI MIG Serie 6 DIGIT"
+  },
+  {
+    "Circuito": "CI MIG Serie 6 DIGIT B"
+  },
+  {
+    "Circuito": "CI MIG Serie 6 Interface"
+  },
+  {
+    "Circuito": "CI MIG300SI CONTROL"
+  },
+  {
+    "Circuito": "CI Power MIG300SI"
+  },
+  {
+    "Circuito": "CI RCD DIGIT"
+  },
+  {
+    "Circuito": "CI SMD THI DIGIT"
+  },
+  {
+    "Circuito": "CI TP FRONT"
+  },
+  {
+    "Circuito": "CI.AF FULX 500"
+  },
+  {
+    "Circuito": "CI.AF FULX 500 isolador"
+  },
+  {
+    "Circuito": "DC/DC 24V"
+  },
+  {
+    "Circuito": "Inverprotek"
+  },
+  {
+    "Circuito": "MIG S5"
+  },
+  {
+    "Circuito": "Motor MIG300SI"
+  },
+  {
+    "Circuito": "REGULADOR AF TIG"
+  },
+  {
+    "Circuito": "SMD RCD DIGIT"
+  },
+  {
+    "Circuito": "mig control 500"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "ID": 0,
+    "ModeloElectrex": "ACDC 323"
+  },
+  {
+    "ID": 1,
+    "ModeloElectrex": "DC 163"
+  },
+  {
+    "ID": 2,
+    "ModeloElectrex": "DC 203"
+  },
+  {
+    "ID": 3,
+    "ModeloElectrex": "DC 253"
+  },
+  {
+    "ID": 4,
+    "ModeloElectrex": "DIGIT II MIG 296 C"
+  },
+  {
+    "ID": 5,
+    "ModeloElectrex": "DIGIT II MIG 306 C"
+  },
+  {
+    "ID": 6,
+    "ModeloElectrex": "DIGIT II MIG 356 C"
+  },
+  {
+    "ID": 7,
+    "ModeloElectrex": "DIGIT II MIG 356 M"
+  },
+  {
+    "ID": 8,
+    "ModeloElectrex": "DIGIT II MIG 406 C"
+  },
+  {
+    "ID": 9,
+    "ModeloElectrex": "DIGIT II MIG 406 M"
+  },
+  {
+    "ID": 10,
+    "ModeloElectrex": "DIGIT II MIG 406 WM"
+  },
+  {
+    "ID": 11,
+    "ModeloElectrex": "DIGIT II MIG 506 WM"
+  },
+  {
+    "ID": 12,
+    "ModeloElectrex": "DIGIT II MIG 656 WM"
+  },
+  {
+    "ID": 13,
+    "ModeloElectrex": "LTRONIC MIG 456 WM"
+  },
+  {
+    "ID": 14,
+    "ModeloElectrex": "LTRONIC MIG 556 WM"
+  },
+  {
+    "ID": 15,
+    "ModeloElectrex": "MIG BASIC 303 C"
+  },
+  {
+    "ID": 16,
+    "ModeloElectrex": "SYNERGIC II MIG 256 C"
+  },
+  {
+    "ID": 17,
+    "ModeloElectrex": "SYNERGIC II MIG 406 C"
+  },
+  {
+    "ID": 18,
+    "ModeloElectrex": "SYNERGIC II MIG 506 WM"
+  },
+  {
+    "ID": 19,
+    "ModeloElectrex": "THI 50 DIGIT"
+  },
+  {
+    "ID": 20,
+    "ModeloElectrex": "TP 163"
+  },
+  {
+    "ID": 21,
+    "ModeloElectrex": "TP 203"
+  },
+  {
+    "ID": 22,
+    "ModeloElectrex": "TP 253"
+  },
+  {
+    "ID": 23,
+    "ModeloElectrex": "TP 323"
+  }
+]

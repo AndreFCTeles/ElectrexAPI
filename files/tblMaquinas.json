@@ -1,0 +1,2922 @@
+[
+  {
+    "ID": 0,
+    "Maquina": "00AC/DCTP"
+  },
+  {
+    "ID": 1,
+    "Maquina": "1/A107"
+  },
+  {
+    "ID": 2,
+    "Maquina": "100"
+  },
+  {
+    "ID": 3,
+    "Maquina": "1000"
+  },
+  {
+    "ID": 4,
+    "Maquina": "110"
+  },
+  {
+    "ID": 5,
+    "Maquina": "120"
+  },
+  {
+    "ID": 6,
+    "Maquina": "1250"
+  },
+  {
+    "ID": 7,
+    "Maquina": "130"
+  },
+  {
+    "ID": 8,
+    "Maquina": "1300COLT"
+  },
+  {
+    "ID": 9,
+    "Maquina": "1300PRO"
+  },
+  {
+    "ID": 10,
+    "Maquina": "130E"
+  },
+  {
+    "ID": 11,
+    "Maquina": "135"
+  },
+  {
+    "ID": 12,
+    "Maquina": "140"
+  },
+  {
+    "ID": 13,
+    "Maquina": "140DC"
+  },
+  {
+    "ID": 14,
+    "Maquina": "141DC"
+  },
+  {
+    "ID": 15,
+    "Maquina": "144"
+  },
+  {
+    "ID": 16,
+    "Maquina": "145"
+  },
+  {
+    "ID": 17,
+    "Maquina": "1450"
+  },
+  {
+    "ID": 18,
+    "Maquina": "150"
+  },
+  {
+    "ID": 19,
+    "Maquina": "150TIG"
+  },
+  {
+    "ID": 20,
+    "Maquina": "1500"
+  },
+  {
+    "ID": 21,
+    "Maquina": "1500PRO"
+  },
+  {
+    "ID": 22,
+    "Maquina": "1500DC"
+  },
+  {
+    "ID": 23,
+    "Maquina": "1500PRO(MÓDULO)"
+  },
+  {
+    "ID": 24,
+    "Maquina": "150BT"
+  },
+  {
+    "ID": 25,
+    "Maquina": "150S"
+  },
+  {
+    "ID": 26,
+    "Maquina": "152"
+  },
+  {
+    "ID": 27,
+    "Maquina": "1550"
+  },
+  {
+    "ID": 28,
+    "Maquina": "1555"
+  },
+  {
+    "ID": 29,
+    "Maquina": "160"
+  },
+  {
+    "ID": 30,
+    "Maquina": "160HF"
+  },
+  {
+    "ID": 31,
+    "Maquina": "160TP"
+  },
+  {
+    "ID": 32,
+    "Maquina": "160WELD&CUT"
+  },
+  {
+    "ID": 33,
+    "Maquina": "1600"
+  },
+  {
+    "ID": 34,
+    "Maquina": "1601HF"
+  },
+  {
+    "ID": 35,
+    "Maquina": "1601S"
+  },
+  {
+    "ID": 36,
+    "Maquina": "160A"
+  },
+  {
+    "ID": 37,
+    "Maquina": "160AC/DC"
+  },
+  {
+    "ID": 38,
+    "Maquina": "160CUTWELD"
+  },
+  {
+    "ID": 39,
+    "Maquina": "160DC"
+  },
+  {
+    "ID": 40,
+    "Maquina": "160ES"
+  },
+  {
+    "ID": 41,
+    "Maquina": "160HFPULSE"
+  },
+  {
+    "ID": 42,
+    "Maquina": "160HFP"
+  },
+  {
+    "ID": 43,
+    "Maquina": "160HFTP"
+  },
+  {
+    "ID": 44,
+    "Maquina": "160LT"
+  },
+  {
+    "ID": 45,
+    "Maquina": "160ST"
+  },
+  {
+    "ID": 46,
+    "Maquina": "160TLH"
+  },
+  {
+    "ID": 47,
+    "Maquina": "160V"
+  },
+  {
+    "ID": 48,
+    "Maquina": "160ZX7"
+  },
+  {
+    "ID": 49,
+    "Maquina": "161"
+  },
+  {
+    "ID": 50,
+    "Maquina": "161DC"
+  },
+  {
+    "ID": 51,
+    "Maquina": "161HF"
+  },
+  {
+    "ID": 52,
+    "Maquina": "161MMA"
+  },
+  {
+    "ID": 53,
+    "Maquina": "161TP"
+  },
+  {
+    "ID": 54,
+    "Maquina": "162"
+  },
+  {
+    "ID": 55,
+    "Maquina": "162DC"
+  },
+  {
+    "ID": 56,
+    "Maquina": "162HF"
+  },
+  {
+    "ID": 57,
+    "Maquina": "164"
+  },
+  {
+    "ID": 58,
+    "Maquina": "164TLH"
+  },
+  {
+    "ID": 59,
+    "Maquina": "164LT"
+  },
+  {
+    "ID": 60,
+    "Maquina": "164TLM"
+  },
+  {
+    "ID": 61,
+    "Maquina": "165"
+  },
+  {
+    "ID": 62,
+    "Maquina": "165DC"
+  },
+  {
+    "ID": 63,
+    "Maquina": "1650"
+  },
+  {
+    "ID": 64,
+    "Maquina": "168"
+  },
+  {
+    "ID": 65,
+    "Maquina": "170"
+  },
+  {
+    "ID": 66,
+    "Maquina": "1700"
+  },
+  {
+    "ID": 67,
+    "Maquina": "170S"
+  },
+  {
+    "ID": 68,
+    "Maquina": "171T"
+  },
+  {
+    "ID": 69,
+    "Maquina": "172AC/DC"
+  },
+  {
+    "ID": 70,
+    "Maquina": "175"
+  },
+  {
+    "ID": 71,
+    "Maquina": "1750"
+  },
+  {
+    "ID": 72,
+    "Maquina": "175DC"
+  },
+  {
+    "ID": 73,
+    "Maquina": "180"
+  },
+  {
+    "ID": 74,
+    "Maquina": "1800"
+  },
+  {
+    "ID": 75,
+    "Maquina": "1800PRO"
+  },
+  {
+    "ID": 76,
+    "Maquina": "1800PRO(MÓDULO)"
+  },
+  {
+    "ID": 77,
+    "Maquina": "180P"
+  },
+  {
+    "ID": 78,
+    "Maquina": "183"
+  },
+  {
+    "ID": 79,
+    "Maquina": "185"
+  },
+  {
+    "ID": 80,
+    "Maquina": "1850"
+  },
+  {
+    "ID": 81,
+    "Maquina": "188"
+  },
+  {
+    "ID": 82,
+    "Maquina": "190"
+  },
+  {
+    "ID": 83,
+    "Maquina": "190DC"
+  },
+  {
+    "ID": 84,
+    "Maquina": "190HF"
+  },
+  {
+    "ID": 85,
+    "Maquina": "191"
+  },
+  {
+    "ID": 86,
+    "Maquina": "191DC"
+  },
+  {
+    "ID": 87,
+    "Maquina": "191HF"
+  },
+  {
+    "ID": 88,
+    "Maquina": "200"
+  },
+  {
+    "ID": 89,
+    "Maquina": "200AC/DC"
+  },
+  {
+    "ID": 90,
+    "Maquina": "200DC"
+  },
+  {
+    "ID": 91,
+    "Maquina": "200HF"
+  },
+  {
+    "ID": 92,
+    "Maquina": "200A"
+  },
+  {
+    "ID": 93,
+    "Maquina": "200AC/DCP"
+  },
+  {
+    "ID": 94,
+    "Maquina": "200AC/DCHFP"
+  },
+  {
+    "ID": 95,
+    "Maquina": "200AC/DCTP"
+  },
+  {
+    "ID": 96,
+    "Maquina": "200ACDC"
+  },
+  {
+    "ID": 97,
+    "Maquina": "200DCTIG"
+  },
+  {
+    "ID": 98,
+    "Maquina": "200DCTP"
+  },
+  {
+    "ID": 99,
+    "Maquina": "200HFP"
+  },
+  {
+    "ID": 100,
+    "Maquina": "200HFPULSE"
+  },
+  {
+    "ID": 101,
+    "Maquina": "200HFTP"
+  },
+  {
+    "ID": 102,
+    "Maquina": "200LT"
+  },
+  {
+    "ID": 103,
+    "Maquina": "200TI"
+  },
+  {
+    "ID": 104,
+    "Maquina": "200TIDC"
+  },
+  {
+    "ID": 105,
+    "Maquina": "200TIG"
+  },
+  {
+    "ID": 106,
+    "Maquina": "200TIGHF"
+  },
+  {
+    "ID": 107,
+    "Maquina": "200TIGPULSE"
+  },
+  {
+    "ID": 108,
+    "Maquina": "200TP"
+  },
+  {
+    "ID": 109,
+    "Maquina": "20161681"
+  },
+  {
+    "ID": 110,
+    "Maquina": "20170672"
+  },
+  {
+    "ID": 111,
+    "Maquina": "202"
+  },
+  {
+    "ID": 112,
+    "Maquina": "202PULSE"
+  },
+  {
+    "ID": 113,
+    "Maquina": "202DC"
+  },
+  {
+    "ID": 114,
+    "Maquina": "202HF"
+  },
+  {
+    "ID": 115,
+    "Maquina": "202TP"
+  },
+  {
+    "ID": 116,
+    "Maquina": "205"
+  },
+  {
+    "ID": 117,
+    "Maquina": "210AC/DC"
+  },
+  {
+    "ID": 118,
+    "Maquina": "210DC"
+  },
+  {
+    "ID": 119,
+    "Maquina": "212DC"
+  },
+  {
+    "ID": 120,
+    "Maquina": "215"
+  },
+  {
+    "ID": 121,
+    "Maquina": "220"
+  },
+  {
+    "ID": 122,
+    "Maquina": "2200"
+  },
+  {
+    "ID": 123,
+    "Maquina": "2200DC"
+  },
+  {
+    "ID": 124,
+    "Maquina": "220AC/DC"
+  },
+  {
+    "ID": 125,
+    "Maquina": "220DC"
+  },
+  {
+    "ID": 126,
+    "Maquina": "221DC"
+  },
+  {
+    "ID": 127,
+    "Maquina": "221HF"
+  },
+  {
+    "ID": 128,
+    "Maquina": "221TP"
+  },
+  {
+    "ID": 129,
+    "Maquina": "223"
+  },
+  {
+    "ID": 130,
+    "Maquina": "230HF"
+  },
+  {
+    "ID": 131,
+    "Maquina": "230TIG"
+  },
+  {
+    "ID": 132,
+    "Maquina": "230DC"
+  },
+  {
+    "ID": 133,
+    "Maquina": "230TP"
+  },
+  {
+    "ID": 134,
+    "Maquina": "231HF"
+  },
+  {
+    "ID": 135,
+    "Maquina": "250"
+  },
+  {
+    "ID": 136,
+    "Maquina": "250DC"
+  },
+  {
+    "ID": 137,
+    "Maquina": "250MIG"
+  },
+  {
+    "ID": 138,
+    "Maquina": "250-3DCPULSE"
+  },
+  {
+    "ID": 139,
+    "Maquina": "250HF"
+  },
+  {
+    "ID": 140,
+    "Maquina": "250HFP"
+  },
+  {
+    "ID": 141,
+    "Maquina": "250TP"
+  },
+  {
+    "ID": 142,
+    "Maquina": "2511DC"
+  },
+  {
+    "ID": 143,
+    "Maquina": "3.2AC/DC"
+  },
+  {
+    "ID": 144,
+    "Maquina": "300"
+  },
+  {
+    "ID": 145,
+    "Maquina": "300AC/DCPULSE"
+  },
+  {
+    "ID": 146,
+    "Maquina": "300AC/DC"
+  },
+  {
+    "ID": 147,
+    "Maquina": "300ACDC"
+  },
+  {
+    "ID": 148,
+    "Maquina": "300DC"
+  },
+  {
+    "ID": 149,
+    "Maquina": "300TIGPULSE"
+  },
+  {
+    "ID": 150,
+    "Maquina": "302AC/DC"
+  },
+  {
+    "ID": 151,
+    "Maquina": "302AC/DCTP"
+  },
+  {
+    "ID": 152,
+    "Maquina": "315AC/DC"
+  },
+  {
+    "ID": 153,
+    "Maquina": "315ACDC"
+  },
+  {
+    "ID": 154,
+    "Maquina": "320"
+  },
+  {
+    "ID": 155,
+    "Maquina": "320AC/DC"
+  },
+  {
+    "ID": 156,
+    "Maquina": "320ACDC"
+  },
+  {
+    "ID": 157,
+    "Maquina": "35"
+  },
+  {
+    "ID": 158,
+    "Maquina": "350AC/DC"
+  },
+  {
+    "ID": 159,
+    "Maquina": "350ACDC"
+  },
+  {
+    "ID": 160,
+    "Maquina": "400DC"
+  },
+  {
+    "ID": 161,
+    "Maquina": "50RX"
+  },
+  {
+    "ID": 162,
+    "Maquina": "ACTUAL500"
+  },
+  {
+    "ID": 163,
+    "Maquina": "ACTUAL500EW"
+  },
+  {
+    "ID": 164,
+    "Maquina": "AFTIGCOLDWIRE"
+  },
+  {
+    "ID": 165,
+    "Maquina": "AF45.2COLDWIRE"
+  },
+  {
+    "ID": 166,
+    "Maquina": "AFTIG45.2"
+  },
+  {
+    "ID": 167,
+    "Maquina": "AKI100"
+  },
+  {
+    "ID": 168,
+    "Maquina": "ALTIG2200DC"
+  },
+  {
+    "ID": 169,
+    "Maquina": "APOLLOII200"
+  },
+  {
+    "ID": 170,
+    "Maquina": "APOLLOII160"
+  },
+  {
+    "ID": 171,
+    "Maquina": "APOLLO160"
+  },
+  {
+    "ID": 172,
+    "Maquina": "APOLLO200"
+  },
+  {
+    "ID": 173,
+    "Maquina": "ARC160"
+  },
+  {
+    "ID": 174,
+    "Maquina": "ARC200II"
+  },
+  {
+    "ID": 175,
+    "Maquina": "ARC2200"
+  },
+  {
+    "ID": 176,
+    "Maquina": "ARC175"
+  },
+  {
+    "ID": 177,
+    "Maquina": "ARC180"
+  },
+  {
+    "ID": 178,
+    "Maquina": "ARC200"
+  },
+  {
+    "ID": 179,
+    "Maquina": "ARC200LT"
+  },
+  {
+    "ID": 180,
+    "Maquina": "ARCPOWER160"
+  },
+  {
+    "ID": 181,
+    "Maquina": "ARCPOWER180"
+  },
+  {
+    "ID": 182,
+    "Maquina": "ARCPOWER200"
+  },
+  {
+    "ID": 183,
+    "Maquina": "ASTOR200AC/DC"
+  },
+  {
+    "ID": 184,
+    "Maquina": "ACTIVTIG2.0DC"
+  },
+  {
+    "ID": 185,
+    "Maquina": "ALIM.COLDWIREAF45.2"
+  },
+  {
+    "ID": 186,
+    "Maquina": "ALU-ARC1400"
+  },
+  {
+    "ID": 187,
+    "Maquina": "APOLLO160HFPULSE"
+  },
+  {
+    "ID": 188,
+    "Maquina": "APOLLO200HF"
+  },
+  {
+    "ID": 189,
+    "Maquina": "APOLLO200TIG"
+  },
+  {
+    "ID": 190,
+    "Maquina": "APOLLOII200HFPULSE"
+  },
+  {
+    "ID": 191,
+    "Maquina": "ARCECO160"
+  },
+  {
+    "ID": 192,
+    "Maquina": "ARC161"
+  },
+  {
+    "ID": 193,
+    "Maquina": "ARISTOTIG160"
+  },
+  {
+    "ID": 194,
+    "Maquina": "BT160"
+  },
+  {
+    "ID": 195,
+    "Maquina": "BUDDYARC1180"
+  },
+  {
+    "ID": 196,
+    "Maquina": "BUDYARC180"
+  },
+  {
+    "ID": 197,
+    "Maquina": "BUDDYARC180"
+  },
+  {
+    "ID": 198,
+    "Maquina": "BUDDYTIG160"
+  },
+  {
+    "ID": 199,
+    "Maquina": "CADDY150"
+  },
+  {
+    "ID": 200,
+    "Maquina": "CADDY130"
+  },
+  {
+    "ID": 201,
+    "Maquina": "CB15"
+  },
+  {
+    "ID": 202,
+    "Maquina": "CB20"
+  },
+  {
+    "ID": 203,
+    "Maquina": "CB30"
+  },
+  {
+    "ID": 204,
+    "Maquina": "CB50"
+  },
+  {
+    "ID": 205,
+    "Maquina": "CB8"
+  },
+  {
+    "ID": 206,
+    "Maquina": "CF1450"
+  },
+  {
+    "ID": 207,
+    "Maquina": "CF1555"
+  },
+  {
+    "ID": 208,
+    "Maquina": "CG30"
+  },
+  {
+    "ID": 209,
+    "Maquina": "CIARC180"
+  },
+  {
+    "ID": 210,
+    "Maquina": "CIATA160"
+  },
+  {
+    "ID": 211,
+    "Maquina": "CITOARC1800HPF"
+  },
+  {
+    "ID": 212,
+    "Maquina": "COLT1300"
+  },
+  {
+    "ID": 213,
+    "Maquina": "CUTWELD160"
+  },
+  {
+    "ID": 214,
+    "Maquina": "CYCLE60.20"
+  },
+  {
+    "ID": 215,
+    "Maquina": "CADDYARC251"
+  },
+  {
+    "ID": 216,
+    "Maquina": "CADDY140"
+  },
+  {
+    "ID": 217,
+    "Maquina": "CADDY2200I"
+  },
+  {
+    "ID": 218,
+    "Maquina": "CADDYLQH150"
+  },
+  {
+    "ID": 219,
+    "Maquina": "CASTOLIN140"
+  },
+  {
+    "ID": 220,
+    "Maquina": "CIRCUITOFRONTALHF"
+  },
+  {
+    "ID": 221,
+    "Maquina": "COLT150"
+  },
+  {
+    "ID": 222,
+    "Maquina": "DC161"
+  },
+  {
+    "ID": 223,
+    "Maquina": "DC162"
+  },
+  {
+    "ID": 224,
+    "Maquina": "DC163"
+  },
+  {
+    "ID": 225,
+    "Maquina": "DC170"
+  },
+  {
+    "ID": 226,
+    "Maquina": "DC172"
+  },
+  {
+    "ID": 227,
+    "Maquina": "DC191"
+  },
+  {
+    "ID": 228,
+    "Maquina": "DC200"
+  },
+  {
+    "ID": 229,
+    "Maquina": "DC202"
+  },
+  {
+    "ID": 230,
+    "Maquina": "DC203"
+  },
+  {
+    "ID": 231,
+    "Maquina": "DC2200"
+  },
+  {
+    "ID": 232,
+    "Maquina": "DC221"
+  },
+  {
+    "ID": 233,
+    "Maquina": "DC250"
+  },
+  {
+    "ID": 234,
+    "Maquina": "DC400CEL"
+  },
+  {
+    "ID": 235,
+    "Maquina": "DC140"
+  },
+  {
+    "ID": 236,
+    "Maquina": "DC141"
+  },
+  {
+    "ID": 237,
+    "Maquina": "DC160"
+  },
+  {
+    "ID": 238,
+    "Maquina": "DC161(MÓDULO)"
+  },
+  {
+    "ID": 239,
+    "Maquina": "DC165"
+  },
+  {
+    "ID": 240,
+    "Maquina": "DC190"
+  },
+  {
+    "ID": 241,
+    "Maquina": "DC201"
+  },
+  {
+    "ID": 242,
+    "Maquina": "DC210"
+  },
+  {
+    "ID": 243,
+    "Maquina": "DC212"
+  },
+  {
+    "ID": 244,
+    "Maquina": "DC230"
+  },
+  {
+    "ID": 245,
+    "Maquina": "DC252"
+  },
+  {
+    "ID": 246,
+    "Maquina": "DC253"
+  },
+  {
+    "ID": 247,
+    "Maquina": "DC322"
+  },
+  {
+    "ID": 248,
+    "Maquina": "DC491"
+  },
+  {
+    "ID": 249,
+    "Maquina": "DISCOVERY150TP"
+  },
+  {
+    "ID": 250,
+    "Maquina": "E140"
+  },
+  {
+    "ID": 251,
+    "Maquina": "E160"
+  },
+  {
+    "ID": 252,
+    "Maquina": "E160TP"
+  },
+  {
+    "ID": 253,
+    "Maquina": "E160HF"
+  },
+  {
+    "ID": 254,
+    "Maquina": "E190DC"
+  },
+  {
+    "ID": 255,
+    "Maquina": "E190HF"
+  },
+  {
+    "ID": 256,
+    "Maquina": "E200"
+  },
+  {
+    "ID": 257,
+    "Maquina": "E230"
+  },
+  {
+    "ID": 258,
+    "Maquina": "E230HF"
+  },
+  {
+    "ID": 259,
+    "Maquina": "E230TIGPULSE"
+  },
+  {
+    "ID": 260,
+    "Maquina": "E230TP"
+  },
+  {
+    "ID": 261,
+    "Maquina": "E300AC/DCPULSE"
+  },
+  {
+    "ID": 262,
+    "Maquina": "E300TP"
+  },
+  {
+    "ID": 263,
+    "Maquina": "E106TIGPULSE"
+  },
+  {
+    "ID": 264,
+    "Maquina": "E135"
+  },
+  {
+    "ID": 265,
+    "Maquina": "E140(MÓDULO)"
+  },
+  {
+    "ID": 266,
+    "Maquina": "E141"
+  },
+  {
+    "ID": 267,
+    "Maquina": "E1500PRO"
+  },
+  {
+    "ID": 268,
+    "Maquina": "E160(MÓDULO)"
+  },
+  {
+    "ID": 269,
+    "Maquina": "E160DC"
+  },
+  {
+    "ID": 270,
+    "Maquina": "E160TIGPULSE"
+  },
+  {
+    "ID": 271,
+    "Maquina": "E160(MODULO)"
+  },
+  {
+    "ID": 272,
+    "Maquina": "E160HF(MÓDULO)"
+  },
+  {
+    "ID": 273,
+    "Maquina": "E160HFTP"
+  },
+  {
+    "ID": 274,
+    "Maquina": "E160TIG"
+  },
+  {
+    "ID": 275,
+    "Maquina": "E160MÓDULO"
+  },
+  {
+    "ID": 276,
+    "Maquina": "E161"
+  },
+  {
+    "ID": 277,
+    "Maquina": "E161DC"
+  },
+  {
+    "ID": 278,
+    "Maquina": "E161HF"
+  },
+  {
+    "ID": 279,
+    "Maquina": "E161TP"
+  },
+  {
+    "ID": 280,
+    "Maquina": "E162TP"
+  },
+  {
+    "ID": 281,
+    "Maquina": "E16HF"
+  },
+  {
+    "ID": 282,
+    "Maquina": "E1800PRO"
+  },
+  {
+    "ID": 283,
+    "Maquina": "E1800PRO(MÓDULO)"
+  },
+  {
+    "ID": 284,
+    "Maquina": "E190"
+  },
+  {
+    "ID": 285,
+    "Maquina": "E190(MÓDULO)"
+  },
+  {
+    "ID": 286,
+    "Maquina": "E1901"
+  },
+  {
+    "ID": 287,
+    "Maquina": "E190F"
+  },
+  {
+    "ID": 288,
+    "Maquina": "E190HF(MÓDULO)"
+  },
+  {
+    "ID": 289,
+    "Maquina": "E190TP"
+  },
+  {
+    "ID": 290,
+    "Maquina": "E190MODULO"
+  },
+  {
+    "ID": 291,
+    "Maquina": "E190MÓDULO"
+  },
+  {
+    "ID": 292,
+    "Maquina": "E191"
+  },
+  {
+    "ID": 293,
+    "Maquina": "E1910HF"
+  },
+  {
+    "ID": 294,
+    "Maquina": "E191DC"
+  },
+  {
+    "ID": 295,
+    "Maquina": "E1960"
+  },
+  {
+    "ID": 296,
+    "Maquina": "E200DC"
+  },
+  {
+    "ID": 297,
+    "Maquina": "E200HF"
+  },
+  {
+    "ID": 298,
+    "Maquina": "E200AC/DC"
+  },
+  {
+    "ID": 299,
+    "Maquina": "E200AC/DCPULSE"
+  },
+  {
+    "ID": 300,
+    "Maquina": "E200ACDC"
+  },
+  {
+    "ID": 301,
+    "Maquina": "E200CD"
+  },
+  {
+    "ID": 302,
+    "Maquina": "E210DC"
+  },
+  {
+    "ID": 303,
+    "Maquina": "E220"
+  },
+  {
+    "ID": 304,
+    "Maquina": "E220AC/DC"
+  },
+  {
+    "ID": 305,
+    "Maquina": "E220ACDC"
+  },
+  {
+    "ID": 306,
+    "Maquina": "E221TP"
+  },
+  {
+    "ID": 307,
+    "Maquina": "E230DC"
+  },
+  {
+    "ID": 308,
+    "Maquina": "E230(MÓDULO)"
+  },
+  {
+    "ID": 309,
+    "Maquina": "E230HF(MÓDULO)"
+  },
+  {
+    "ID": 310,
+    "Maquina": "E230HFTP"
+  },
+  {
+    "ID": 311,
+    "Maquina": "E230HFMÓDULO"
+  },
+  {
+    "ID": 312,
+    "Maquina": "E230PTP"
+  },
+  {
+    "ID": 313,
+    "Maquina": "E231HF"
+  },
+  {
+    "ID": 314,
+    "Maquina": "E25"
+  },
+  {
+    "ID": 315,
+    "Maquina": "E300"
+  },
+  {
+    "ID": 316,
+    "Maquina": "E300AC/DC"
+  },
+  {
+    "ID": 317,
+    "Maquina": "E300TIGPULSE"
+  },
+  {
+    "ID": 318,
+    "Maquina": "E300ACDC"
+  },
+  {
+    "ID": 319,
+    "Maquina": "E300ACDCPULSE"
+  },
+  {
+    "ID": 320,
+    "Maquina": "E300ACDCTP"
+  },
+  {
+    "ID": 321,
+    "Maquina": "E301TP"
+  },
+  {
+    "ID": 322,
+    "Maquina": "E302AC/DC"
+  },
+  {
+    "ID": 323,
+    "Maquina": "E315ACDCCOMRODAS"
+  },
+  {
+    "ID": 324,
+    "Maquina": "E320AC/DC"
+  },
+  {
+    "ID": 325,
+    "Maquina": "E322AC/DC"
+  },
+  {
+    "ID": 326,
+    "Maquina": "E35"
+  },
+  {
+    "ID": 327,
+    "Maquina": "EASY131"
+  },
+  {
+    "ID": 328,
+    "Maquina": "ECO200"
+  },
+  {
+    "ID": 329,
+    "Maquina": "ECO200DC"
+  },
+  {
+    "ID": 330,
+    "Maquina": "ECTIG"
+  },
+  {
+    "ID": 331,
+    "Maquina": "ELD&CUT160"
+  },
+  {
+    "ID": 332,
+    "Maquina": "ELECTRO150"
+  },
+  {
+    "ID": 333,
+    "Maquina": "ELEKTRO160"
+  },
+  {
+    "ID": 334,
+    "Maquina": "ELEKTRO160V"
+  },
+  {
+    "ID": 335,
+    "Maquina": "ELEKTROTIG150"
+  },
+  {
+    "ID": 336,
+    "Maquina": "ELEKTROTIG160"
+  },
+  {
+    "ID": 337,
+    "Maquina": "ELEKTROTIG200"
+  },
+  {
+    "ID": 338,
+    "Maquina": "ELEKTROTIG300"
+  },
+  {
+    "ID": 339,
+    "Maquina": "ELEKTROTIG300AC/DC"
+  },
+  {
+    "ID": 340,
+    "Maquina": "ELTO131"
+  },
+  {
+    "ID": 341,
+    "Maquina": "EPSYSTEM150"
+  },
+  {
+    "ID": 342,
+    "Maquina": "ER160TP"
+  },
+  {
+    "ID": 343,
+    "Maquina": "ESABLHN140"
+  },
+  {
+    "ID": 344,
+    "Maquina": "ESAB130"
+  },
+  {
+    "ID": 345,
+    "Maquina": "ETIG160TP"
+  },
+  {
+    "ID": 346,
+    "Maquina": "ETP301"
+  },
+  {
+    "ID": 347,
+    "Maquina": "EWI275"
+  },
+  {
+    "ID": 348,
+    "Maquina": "EWMTRITON260"
+  },
+  {
+    "ID": 349,
+    "Maquina": "EEKTROSTA150(MODULO)"
+  },
+  {
+    "ID": 350,
+    "Maquina": "ELECTREX"
+  },
+  {
+    "ID": 351,
+    "Maquina": "ELECTRITIG300AC/DC"
+  },
+  {
+    "ID": 352,
+    "Maquina": "ELECTRO140"
+  },
+  {
+    "ID": 353,
+    "Maquina": "ELECTRO160"
+  },
+  {
+    "ID": 354,
+    "Maquina": "ELECTRO130"
+  },
+  {
+    "ID": 355,
+    "Maquina": "ELECTRO140MODULO"
+  },
+  {
+    "ID": 356,
+    "Maquina": "ELECTRO160V"
+  },
+  {
+    "ID": 357,
+    "Maquina": "ELECTROTIG160"
+  },
+  {
+    "ID": 358,
+    "Maquina": "ELECTROTIG150"
+  },
+  {
+    "ID": 359,
+    "Maquina": "ELECTROTIG200"
+  },
+  {
+    "ID": 360,
+    "Maquina": "ELECTROTIG200ACDC"
+  },
+  {
+    "ID": 361,
+    "Maquina": "ELECTROTIG300"
+  },
+  {
+    "ID": 362,
+    "Maquina": "ELECTROTIG300AC/DC"
+  },
+  {
+    "ID": 363,
+    "Maquina": "ELECTROTIG300ACDC"
+  },
+  {
+    "ID": 364,
+    "Maquina": "ELEKTRO150"
+  },
+  {
+    "ID": 365,
+    "Maquina": "ELEKTRO150(MODULO)"
+  },
+  {
+    "ID": 366,
+    "Maquina": "ELEKTRO130"
+  },
+  {
+    "ID": 367,
+    "Maquina": "ELEKTRO140"
+  },
+  {
+    "ID": 368,
+    "Maquina": "ELEKTRO200"
+  },
+  {
+    "ID": 369,
+    "Maquina": "ELEKTROSTA150(MODULO)"
+  },
+  {
+    "ID": 370,
+    "Maquina": "ELEKTROTIG300ACDC"
+  },
+  {
+    "ID": 371,
+    "Maquina": "ELETTROTIG1650"
+  },
+  {
+    "ID": 372,
+    "Maquina": "FERR1600"
+  },
+  {
+    "ID": 373,
+    "Maquina": "FLASH165"
+  },
+  {
+    "ID": 374,
+    "Maquina": "FLASH35"
+  },
+  {
+    "ID": 375,
+    "Maquina": "FERR2000"
+  },
+  {
+    "ID": 376,
+    "Maquina": "FIMIG366S"
+  },
+  {
+    "ID": 377,
+    "Maquina": "FLASH145"
+  },
+  {
+    "ID": 378,
+    "Maquina": "FLASHCB30"
+  },
+  {
+    "ID": 379,
+    "Maquina": "FLASHCB50"
+  },
+  {
+    "ID": 380,
+    "Maquina": "FRIGOWELD"
+  },
+  {
+    "ID": 381,
+    "Maquina": "GALILEO175"
+  },
+  {
+    "ID": 382,
+    "Maquina": "GENESIS140"
+  },
+  {
+    "ID": 383,
+    "Maquina": "GENESIS260ACDC"
+  },
+  {
+    "ID": 384,
+    "Maquina": "GYSTIG160HF"
+  },
+  {
+    "ID": 385,
+    "Maquina": "GYS164"
+  },
+  {
+    "ID": 386,
+    "Maquina": "GYS3200"
+  },
+  {
+    "ID": 387,
+    "Maquina": "GENERA170"
+  },
+  {
+    "ID": 388,
+    "Maquina": "GYS165"
+  },
+  {
+    "ID": 389,
+    "Maquina": "GYS2500"
+  },
+  {
+    "ID": 390,
+    "Maquina": "GYSMI164"
+  },
+  {
+    "ID": 391,
+    "Maquina": "H2M10"
+  },
+  {
+    "ID": 392,
+    "Maquina": "H2M16"
+  },
+  {
+    "ID": 393,
+    "Maquina": "HF161"
+  },
+  {
+    "ID": 394,
+    "Maquina": "HF202"
+  },
+  {
+    "ID": 395,
+    "Maquina": "HF221"
+  },
+  {
+    "ID": 396,
+    "Maquina": "HF160"
+  },
+  {
+    "ID": 397,
+    "Maquina": "HF162"
+  },
+  {
+    "ID": 398,
+    "Maquina": "HF190"
+  },
+  {
+    "ID": 399,
+    "Maquina": "HF191"
+  },
+  {
+    "ID": 400,
+    "Maquina": "HF191(MÓDULO)"
+  },
+  {
+    "ID": 401,
+    "Maquina": "HF200PULSE"
+  },
+  {
+    "ID": 402,
+    "Maquina": "HF201"
+  },
+  {
+    "ID": 403,
+    "Maquina": "HF230"
+  },
+  {
+    "ID": 404,
+    "Maquina": "HF231"
+  },
+  {
+    "ID": 405,
+    "Maquina": "HIPROTIG1000"
+  },
+  {
+    "ID": 406,
+    "Maquina": "HOBBY140"
+  },
+  {
+    "ID": 407,
+    "Maquina": "HOBBY161"
+  },
+  {
+    "ID": 408,
+    "Maquina": "HT150"
+  },
+  {
+    "ID": 409,
+    "Maquina": "HANDYTIG180AC/DC"
+  },
+  {
+    "ID": 410,
+    "Maquina": "HANDYCUT40HF"
+  },
+  {
+    "ID": 411,
+    "Maquina": "INVERPROTEK"
+  },
+  {
+    "ID": 412,
+    "Maquina": "INVERTECV270"
+  },
+  {
+    "ID": 413,
+    "Maquina": "ICON1850"
+  },
+  {
+    "ID": 414,
+    "Maquina": "JASIC160"
+  },
+  {
+    "ID": 415,
+    "Maquina": "KEMPPI150"
+  },
+  {
+    "ID": 416,
+    "Maquina": "LHN140"
+  },
+  {
+    "ID": 417,
+    "Maquina": "LHN200"
+  },
+  {
+    "ID": 418,
+    "Maquina": "LHQ150"
+  },
+  {
+    "ID": 419,
+    "Maquina": "LIFT162"
+  },
+  {
+    "ID": 420,
+    "Maquina": "LTRONIC556WM"
+  },
+  {
+    "ID": 421,
+    "Maquina": "LUFTARC150"
+  },
+  {
+    "ID": 422,
+    "Maquina": "LINCOLNV-270"
+  },
+  {
+    "ID": 423,
+    "Maquina": "LINCOLNTIG200"
+  },
+  {
+    "ID": 424,
+    "Maquina": "LOBUS211"
+  },
+  {
+    "ID": 425,
+    "Maquina": "M150"
+  },
+  {
+    "ID": 426,
+    "Maquina": "MASTER2800"
+  },
+  {
+    "ID": 427,
+    "Maquina": "MAX160"
+  },
+  {
+    "ID": 428,
+    "Maquina": "MAXIARC200LT"
+  },
+  {
+    "ID": 429,
+    "Maquina": "MICRO152"
+  },
+  {
+    "ID": 430,
+    "Maquina": "MICROTIG161DC"
+  },
+  {
+    "ID": 431,
+    "Maquina": "MICROTIG200HF"
+  },
+  {
+    "ID": 432,
+    "Maquina": "MIG"
+  },
+  {
+    "ID": 433,
+    "Maquina": "MIGC"
+  },
+  {
+    "ID": 434,
+    "Maquina": "MIG256SYN"
+  },
+  {
+    "ID": 435,
+    "Maquina": "MIG350I"
+  },
+  {
+    "ID": 436,
+    "Maquina": "MIG356C"
+  },
+  {
+    "ID": 437,
+    "Maquina": "MIG356M"
+  },
+  {
+    "ID": 438,
+    "Maquina": "MIG404M"
+  },
+  {
+    "ID": 439,
+    "Maquina": "MIG406M"
+  },
+  {
+    "ID": 440,
+    "Maquina": "MIG406WM"
+  },
+  {
+    "ID": 441,
+    "Maquina": "MIG406C"
+  },
+  {
+    "ID": 442,
+    "Maquina": "MIG656WM"
+  },
+  {
+    "ID": 443,
+    "Maquina": "MIGMULTIBASIC303"
+  },
+  {
+    "ID": 444,
+    "Maquina": "MIGONE230"
+  },
+  {
+    "ID": 445,
+    "Maquina": "MIG300PULSED"
+  },
+  {
+    "ID": 446,
+    "Maquina": "MIG300PULSE"
+  },
+  {
+    "ID": 447,
+    "Maquina": "MIG320I"
+  },
+  {
+    "ID": 448,
+    "Maquina": "MINARCTIG250"
+  },
+  {
+    "ID": 449,
+    "Maquina": "MINI110"
+  },
+  {
+    "ID": 450,
+    "Maquina": "MINI130"
+  },
+  {
+    "ID": 451,
+    "Maquina": "MINI150"
+  },
+  {
+    "ID": 452,
+    "Maquina": "MINI165"
+  },
+  {
+    "ID": 453,
+    "Maquina": "MINI80"
+  },
+  {
+    "ID": 454,
+    "Maquina": "MINIARC135"
+  },
+  {
+    "ID": 455,
+    "Maquina": "MINIARC150"
+  },
+  {
+    "ID": 456,
+    "Maquina": "MINIARC180"
+  },
+  {
+    "ID": 457,
+    "Maquina": "MINIMAX106"
+  },
+  {
+    "ID": 458,
+    "Maquina": "MLS2500"
+  },
+  {
+    "ID": 459,
+    "Maquina": "MLS300"
+  },
+  {
+    "ID": 460,
+    "Maquina": "MMA110"
+  },
+  {
+    "ID": 461,
+    "Maquina": "MMA141"
+  },
+  {
+    "ID": 462,
+    "Maquina": "MMA200"
+  },
+  {
+    "ID": 463,
+    "Maquina": "MONO200"
+  },
+  {
+    "ID": 464,
+    "Maquina": "MONOMIG"
+  },
+  {
+    "ID": 465,
+    "Maquina": "MONOMIG250"
+  },
+  {
+    "ID": 466,
+    "Maquina": "MONOMIG250C"
+  },
+  {
+    "ID": 467,
+    "Maquina": "MARTIAL160"
+  },
+  {
+    "ID": 468,
+    "Maquina": "MARTIAL200A"
+  },
+  {
+    "ID": 469,
+    "Maquina": "MASTER2200"
+  },
+  {
+    "ID": 470,
+    "Maquina": "MASTERTIG2000"
+  },
+  {
+    "ID": 471,
+    "Maquina": "MATE160"
+  },
+  {
+    "ID": 472,
+    "Maquina": "MATRIAL200A"
+  },
+  {
+    "ID": 473,
+    "Maquina": "MAXIARC200TL"
+  },
+  {
+    "ID": 474,
+    "Maquina": "MEQ200"
+  },
+  {
+    "ID": 475,
+    "Maquina": "MICROTIG160HF"
+  },
+  {
+    "ID": 476,
+    "Maquina": "MICROTIG200AC/DC"
+  },
+  {
+    "ID": 477,
+    "Maquina": "MICROTIG201DC"
+  },
+  {
+    "ID": 478,
+    "Maquina": "MICROTIGDC202P"
+  },
+  {
+    "ID": 479,
+    "Maquina": "MIG256CSYN"
+  },
+  {
+    "ID": 480,
+    "Maquina": "MIG296C"
+  },
+  {
+    "ID": 481,
+    "Maquina": "MIG306CDIGIT"
+  },
+  {
+    "ID": 482,
+    "Maquina": "MIG306C"
+  },
+  {
+    "ID": 483,
+    "Maquina": "MIG356CDIGIT"
+  },
+  {
+    "ID": 484,
+    "Maquina": "MIG406CSUN"
+  },
+  {
+    "ID": 485,
+    "Maquina": "MIG406MDIGIT"
+  },
+  {
+    "ID": 486,
+    "Maquina": "MIG506WM"
+  },
+  {
+    "ID": 487,
+    "Maquina": "MIGLTRONIC456WM"
+  },
+  {
+    "ID": 488,
+    "Maquina": "MIG556WMLTRONIC"
+  },
+  {
+    "ID": 489,
+    "Maquina": "MINARC150"
+  },
+  {
+    "ID": 490,
+    "Maquina": "MINARC140"
+  },
+  {
+    "ID": 491,
+    "Maquina": "MINIARC140"
+  },
+  {
+    "ID": 492,
+    "Maquina": "NEVARC135"
+  },
+  {
+    "ID": 493,
+    "Maquina": "NIG256CSYN"
+  },
+  {
+    "ID": 494,
+    "Maquina": "ORIGOTIG"
+  },
+  {
+    "ID": 495,
+    "Maquina": "OUTRA"
+  },
+  {
+    "ID": 496,
+    "Maquina": "OX160"
+  },
+  {
+    "ID": 497,
+    "Maquina": "OX1800"
+  },
+  {
+    "ID": 498,
+    "Maquina": "OX200"
+  },
+  {
+    "ID": 499,
+    "Maquina": "OX200TP"
+  },
+  {
+    "ID": 500,
+    "Maquina": "OXECO200"
+  },
+  {
+    "ID": 501,
+    "Maquina": "OXHF250PULSE"
+  },
+  {
+    "ID": 502,
+    "Maquina": "OXTIG200"
+  },
+  {
+    "ID": 503,
+    "Maquina": "OXTIG200DC"
+  },
+  {
+    "ID": 504,
+    "Maquina": "OXTIG200PFC"
+  },
+  {
+    "ID": 505,
+    "Maquina": "OXTIG210AC/DC"
+  },
+  {
+    "ID": 506,
+    "Maquina": "OXTIG250HFPULSE"
+  },
+  {
+    "ID": 507,
+    "Maquina": "OX200DC"
+  },
+  {
+    "ID": 508,
+    "Maquina": "OX2200"
+  },
+  {
+    "ID": 509,
+    "Maquina": "OX300AC/DC"
+  },
+  {
+    "ID": 510,
+    "Maquina": "OX320AC/DC"
+  },
+  {
+    "ID": 511,
+    "Maquina": "ORBI140"
+  },
+  {
+    "ID": 512,
+    "Maquina": "ORITIG150"
+  },
+  {
+    "ID": 513,
+    "Maquina": "PC6060/T(PLASMA)"
+  },
+  {
+    "ID": 514,
+    "Maquina": "PFDS33B2"
+  },
+  {
+    "ID": 515,
+    "Maquina": "PHOENIX330"
+  },
+  {
+    "ID": 516,
+    "Maquina": "PHOENIX355MIG"
+  },
+  {
+    "ID": 517,
+    "Maquina": "PHOENIX355PROG"
+  },
+  {
+    "ID": 518,
+    "Maquina": "PHOENIX400"
+  },
+  {
+    "ID": 519,
+    "Maquina": "PICO230CEL"
+  },
+  {
+    "ID": 520,
+    "Maquina": "PICOTIG160HF"
+  },
+  {
+    "ID": 521,
+    "Maquina": "PICOTIG190AC/DC"
+  },
+  {
+    "ID": 522,
+    "Maquina": "PICOTIG200DC"
+  },
+  {
+    "ID": 523,
+    "Maquina": "PICOTIG220AC/DC"
+  },
+  {
+    "ID": 524,
+    "Maquina": "PICOTIG220DC"
+  },
+  {
+    "ID": 525,
+    "Maquina": "PLASMA1538"
+  },
+  {
+    "ID": 526,
+    "Maquina": "PLASMAXCP60"
+  },
+  {
+    "ID": 527,
+    "Maquina": "PLASMA40"
+  },
+  {
+    "ID": 528,
+    "Maquina": "PLASMA60HF"
+  },
+  {
+    "ID": 529,
+    "Maquina": "PLASMACUT40"
+  },
+  {
+    "ID": 530,
+    "Maquina": "PLASMACUT60"
+  },
+  {
+    "ID": 531,
+    "Maquina": "PM-150"
+  },
+  {
+    "ID": 532,
+    "Maquina": "PMX1250"
+  },
+  {
+    "ID": 533,
+    "Maquina": "PMX350"
+  },
+  {
+    "ID": 534,
+    "Maquina": "PMX85"
+  },
+  {
+    "ID": 535,
+    "Maquina": "POWERMAX140"
+  },
+  {
+    "ID": 536,
+    "Maquina": "POWERROD1350"
+  },
+  {
+    "ID": 537,
+    "Maquina": "POWERMAX1000"
+  },
+  {
+    "ID": 538,
+    "Maquina": "POWERMAX150"
+  },
+  {
+    "ID": 539,
+    "Maquina": "PRESTO160"
+  },
+  {
+    "ID": 540,
+    "Maquina": "PRO!800"
+  },
+  {
+    "ID": 541,
+    "Maquina": "PRO1300"
+  },
+  {
+    "ID": 542,
+    "Maquina": "PRO1500"
+  },
+  {
+    "ID": 543,
+    "Maquina": "PRO165"
+  },
+  {
+    "ID": 544,
+    "Maquina": "PRO1800"
+  },
+  {
+    "ID": 545,
+    "Maquina": "PEGAS160"
+  },
+  {
+    "ID": 546,
+    "Maquina": "PEGAS160E"
+  },
+  {
+    "ID": 547,
+    "Maquina": "PICO140"
+  },
+  {
+    "ID": 548,
+    "Maquina": "PLACATIG/HF"
+  },
+  {
+    "ID": 549,
+    "Maquina": "PLASMA80"
+  },
+  {
+    "ID": 550,
+    "Maquina": "PLASMAPC100"
+  },
+  {
+    "ID": 551,
+    "Maquina": "PLASMAPT60"
+  },
+  {
+    "ID": 552,
+    "Maquina": "PLASMACUT50"
+  },
+  {
+    "ID": 553,
+    "Maquina": "POTENZATIG170HF"
+  },
+  {
+    "ID": 554,
+    "Maquina": "POWER1350"
+  },
+  {
+    "ID": 555,
+    "Maquina": "POWERMAX1250"
+  },
+  {
+    "ID": 556,
+    "Maquina": "POWERMAX1650"
+  },
+  {
+    "ID": 557,
+    "Maquina": "POWERMAX45"
+  },
+  {
+    "ID": 558,
+    "Maquina": "PRAXAIRPHOENIX300"
+  },
+  {
+    "ID": 559,
+    "Maquina": "PRESTO135"
+  },
+  {
+    "ID": 560,
+    "Maquina": "PRESTO160G"
+  },
+  {
+    "ID": 561,
+    "Maquina": "PRO4000"
+  },
+  {
+    "ID": 562,
+    "Maquina": "RE190"
+  },
+  {
+    "ID": 563,
+    "Maquina": "REX130"
+  },
+  {
+    "ID": 564,
+    "Maquina": "RAIDER142"
+  },
+  {
+    "ID": 565,
+    "Maquina": "REFRIGERADORMPH"
+  },
+  {
+    "ID": 566,
+    "Maquina": "ROLUK160"
+  },
+  {
+    "ID": 567,
+    "Maquina": "S160"
+  },
+  {
+    "ID": 568,
+    "Maquina": "S1601"
+  },
+  {
+    "ID": 569,
+    "Maquina": "S1602"
+  },
+  {
+    "ID": 570,
+    "Maquina": "S1700"
+  },
+  {
+    "ID": 571,
+    "Maquina": "S4000"
+  },
+  {
+    "ID": 572,
+    "Maquina": "SAXO3.5"
+  },
+  {
+    "ID": 573,
+    "Maquina": "SELCO164TLH"
+  },
+  {
+    "ID": 574,
+    "Maquina": "SOLUTION4000"
+  },
+  {
+    "ID": 575,
+    "Maquina": "START3.5"
+  },
+  {
+    "ID": 576,
+    "Maquina": "STAYER40GE"
+  },
+  {
+    "ID": 577,
+    "Maquina": "SX140"
+  },
+  {
+    "ID": 578,
+    "Maquina": "SYNERGICMIG506WM"
+  },
+  {
+    "ID": 579,
+    "Maquina": "SYNERGICMIG506%WM"
+  },
+  {
+    "ID": 580,
+    "Maquina": "SELCO260AC/DC"
+  },
+  {
+    "ID": 581,
+    "Maquina": "STYL165"
+  },
+  {
+    "ID": 582,
+    "Maquina": "STYL175"
+  },
+  {
+    "ID": 583,
+    "Maquina": "STYL185"
+  },
+  {
+    "ID": 584,
+    "Maquina": "T45"
+  },
+  {
+    "ID": 585,
+    "Maquina": "TA130"
+  },
+  {
+    "ID": 586,
+    "Maquina": "TECTRONIC162"
+  },
+  {
+    "ID": 587,
+    "Maquina": "TERO202"
+  },
+  {
+    "ID": 588,
+    "Maquina": "TETRIX270AC/DC"
+  },
+  {
+    "ID": 589,
+    "Maquina": "TETRIX300PLUS"
+  },
+  {
+    "ID": 590,
+    "Maquina": "TETRIX300-12"
+  },
+  {
+    "ID": 591,
+    "Maquina": "TH1600"
+  },
+  {
+    "ID": 592,
+    "Maquina": "TH1600TIG"
+  },
+  {
+    "ID": 593,
+    "Maquina": "THI50DIGIT"
+  },
+  {
+    "ID": 594,
+    "Maquina": "THOR200"
+  },
+  {
+    "ID": 595,
+    "Maquina": "TIG"
+  },
+  {
+    "ID": 596,
+    "Maquina": "TIG150C"
+  },
+  {
+    "ID": 597,
+    "Maquina": "TIG160"
+  },
+  {
+    "ID": 598,
+    "Maquina": "TIG180P"
+  },
+  {
+    "ID": 599,
+    "Maquina": "TIG200"
+  },
+  {
+    "ID": 600,
+    "Maquina": "TIG200AC/DC"
+  },
+  {
+    "ID": 601,
+    "Maquina": "TIG200DC"
+  },
+  {
+    "ID": 602,
+    "Maquina": "TIG200DCPULSE"
+  },
+  {
+    "ID": 603,
+    "Maquina": "TIG200HF"
+  },
+  {
+    "ID": 604,
+    "Maquina": "TIG200HFPULSE"
+  },
+  {
+    "ID": 605,
+    "Maquina": "TIG200PULSE"
+  },
+  {
+    "ID": 606,
+    "Maquina": "TIG202"
+  },
+  {
+    "ID": 607,
+    "Maquina": "TIG210AC/DC"
+  },
+  {
+    "ID": 608,
+    "Maquina": "TIG1450"
+  },
+  {
+    "ID": 609,
+    "Maquina": "TIG1500"
+  },
+  {
+    "ID": 610,
+    "Maquina": "TIG160AC/DC"
+  },
+  {
+    "ID": 611,
+    "Maquina": "TIG160HF"
+  },
+  {
+    "ID": 612,
+    "Maquina": "TIG160P"
+  },
+  {
+    "ID": 613,
+    "Maquina": "TIG162P"
+  },
+  {
+    "ID": 614,
+    "Maquina": "TIG175"
+  },
+  {
+    "ID": 615,
+    "Maquina": "TIG185"
+  },
+  {
+    "ID": 616,
+    "Maquina": "TIG200ACDC"
+  },
+  {
+    "ID": 617,
+    "Maquina": "TIG200HFP"
+  },
+  {
+    "ID": 618,
+    "Maquina": "TIG200HFTP"
+  },
+  {
+    "ID": 619,
+    "Maquina": "TIG200P"
+  },
+  {
+    "ID": 620,
+    "Maquina": "TIG200PT"
+  },
+  {
+    "ID": 621,
+    "Maquina": "TIG200TP"
+  },
+  {
+    "ID": 622,
+    "Maquina": "TIG202PULSE"
+  },
+  {
+    "ID": 623,
+    "Maquina": "TIG20HFPULSE"
+  },
+  {
+    "ID": 624,
+    "Maquina": "TIG232"
+  },
+  {
+    "ID": 625,
+    "Maquina": "TIG250DCPULSE"
+  },
+  {
+    "ID": 626,
+    "Maquina": "TIG250HF"
+  },
+  {
+    "ID": 627,
+    "Maquina": "TIG250HFP"
+  },
+  {
+    "ID": 628,
+    "Maquina": "TIG250P"
+  },
+  {
+    "ID": 629,
+    "Maquina": "TIG250TP"
+  },
+  {
+    "ID": 630,
+    "Maquina": "TIG280AC/DC"
+  },
+  {
+    "ID": 631,
+    "Maquina": "TIG300DC"
+  },
+  {
+    "ID": 632,
+    "Maquina": "TIG301DC/HF"
+  },
+  {
+    "ID": 633,
+    "Maquina": "TIG320AC/DC"
+  },
+  {
+    "ID": 634,
+    "Maquina": "TIG350AC/DC"
+  },
+  {
+    "ID": 635,
+    "Maquina": "TIGAC/DC315"
+  },
+  {
+    "ID": 636,
+    "Maquina": "TP162"
+  },
+  {
+    "ID": 637,
+    "Maquina": "TP163"
+  },
+  {
+    "ID": 638,
+    "Maquina": "TP200"
+  },
+  {
+    "ID": 639,
+    "Maquina": "TP202"
+  },
+  {
+    "ID": 640,
+    "Maquina": "TP202AC/DC"
+  },
+  {
+    "ID": 641,
+    "Maquina": "TP203"
+  },
+  {
+    "ID": 642,
+    "Maquina": "TP221"
+  },
+  {
+    "ID": 643,
+    "Maquina": "TP230AC/DC"
+  },
+  {
+    "ID": 644,
+    "Maquina": "TP252"
+  },
+  {
+    "ID": 645,
+    "Maquina": "TP303AC/DA"
+  },
+  {
+    "ID": 646,
+    "Maquina": "TP323AC/DC"
+  },
+  {
+    "ID": 647,
+    "Maquina": "TP352"
+  },
+  {
+    "ID": 648,
+    "Maquina": "TP352AC/DC"
+  },
+  {
+    "ID": 649,
+    "Maquina": "TP160"
+  },
+  {
+    "ID": 650,
+    "Maquina": "TP161"
+  },
+  {
+    "ID": 651,
+    "Maquina": "TP162HFDC"
+  },
+  {
+    "ID": 652,
+    "Maquina": "TP200AC/DC"
+  },
+  {
+    "ID": 653,
+    "Maquina": "TP200DC"
+  },
+  {
+    "ID": 654,
+    "Maquina": "TP210AC/DC"
+  },
+  {
+    "ID": 655,
+    "Maquina": "TP250"
+  },
+  {
+    "ID": 656,
+    "Maquina": "TP253"
+  },
+  {
+    "ID": 657,
+    "Maquina": "TP301"
+  },
+  {
+    "ID": 658,
+    "Maquina": "TP302"
+  },
+  {
+    "ID": 659,
+    "Maquina": "TP302AC/DC"
+  },
+  {
+    "ID": 660,
+    "Maquina": "TP322"
+  },
+  {
+    "ID": 661,
+    "Maquina": "TP322AC/DC"
+  },
+  {
+    "ID": 662,
+    "Maquina": "TP323"
+  },
+  {
+    "ID": 663,
+    "Maquina": "TP350AC/ACPULS"
+  },
+  {
+    "ID": 664,
+    "Maquina": "TP350AC/DC"
+  },
+  {
+    "ID": 665,
+    "Maquina": "TP402AC/DC"
+  },
+  {
+    "ID": 666,
+    "Maquina": "TP503AC/DC"
+  },
+  {
+    "ID": 667,
+    "Maquina": "TPO161"
+  },
+  {
+    "ID": 668,
+    "Maquina": "TRANSTIG1600"
+  },
+  {
+    "ID": 669,
+    "Maquina": "TRANSTIG1750"
+  },
+  {
+    "ID": 670,
+    "Maquina": "TRITON220"
+  },
+  {
+    "ID": 671,
+    "Maquina": "TRITON220AC/DC"
+  },
+  {
+    "ID": 672,
+    "Maquina": "TRITON260"
+  },
+  {
+    "ID": 673,
+    "Maquina": "TS139"
+  },
+  {
+    "ID": 674,
+    "Maquina": "TSR"
+  },
+  {
+    "ID": 675,
+    "Maquina": "TT-1800"
+  },
+  {
+    "ID": 676,
+    "Maquina": "TX150DC"
+  },
+  {
+    "ID": 677,
+    "Maquina": "TX160"
+  },
+  {
+    "ID": 678,
+    "Maquina": "TX1601"
+  },
+  {
+    "ID": 679,
+    "Maquina": "TXTIG1601"
+  },
+  {
+    "ID": 680,
+    "Maquina": "TECNICA164"
+  },
+  {
+    "ID": 681,
+    "Maquina": "TEKTRONIC142"
+  },
+  {
+    "ID": 682,
+    "Maquina": "TEKTRONIC162"
+  },
+  {
+    "ID": 683,
+    "Maquina": "TELWIN114"
+  },
+  {
+    "ID": 684,
+    "Maquina": "TELWIN145"
+  },
+  {
+    "ID": 685,
+    "Maquina": "TELWIN160"
+  },
+  {
+    "ID": 686,
+    "Maquina": "TERO160HF"
+  },
+  {
+    "ID": 687,
+    "Maquina": "TERO191"
+  },
+  {
+    "ID": 688,
+    "Maquina": "TERO160"
+  },
+  {
+    "ID": 689,
+    "Maquina": "TERO190"
+  },
+  {
+    "ID": 690,
+    "Maquina": "TIG1990"
+  },
+  {
+    "ID": 691,
+    "Maquina": "TIG200HFPFC"
+  },
+  {
+    "ID": 692,
+    "Maquina": "TIG2200"
+  },
+  {
+    "ID": 693,
+    "Maquina": "TIGPULSE180"
+  },
+  {
+    "ID": 694,
+    "Maquina": "TOP161"
+  },
+  {
+    "ID": 695,
+    "Maquina": "TRANSPOCKET1400"
+  },
+  {
+    "ID": 696,
+    "Maquina": "TRANSPOCKET1500"
+  },
+  {
+    "ID": 697,
+    "Maquina": "TRANSTIG1700"
+  },
+  {
+    "ID": 698,
+    "Maquina": "TRIUMPHATOR160"
+  },
+  {
+    "ID": 699,
+    "Maquina": "UNILIFT200"
+  },
+  {
+    "ID": 700,
+    "Maquina": "V160T"
+  },
+  {
+    "ID": 701,
+    "Maquina": "V140"
+  },
+  {
+    "ID": 702,
+    "Maquina": "V145"
+  },
+  {
+    "ID": 703,
+    "Maquina": "V145-S"
+  },
+  {
+    "ID": 704,
+    "Maquina": "V145S"
+  },
+  {
+    "ID": 705,
+    "Maquina": "V160S"
+  },
+  {
+    "ID": 706,
+    "Maquina": "V170T"
+  },
+  {
+    "ID": 707,
+    "Maquina": "V200"
+  },
+  {
+    "ID": 708,
+    "Maquina": "V270"
+  },
+  {
+    "ID": 709,
+    "Maquina": "V270PULSE"
+  },
+  {
+    "ID": 710,
+    "Maquina": "V270T"
+  },
+  {
+    "ID": 711,
+    "Maquina": "V270TP"
+  },
+  {
+    "ID": 712,
+    "Maquina": "V270TTP"
+  },
+  {
+    "ID": 713,
+    "Maquina": "VP150"
+  },
+  {
+    "ID": 714,
+    "Maquina": "W150"
+  },
+  {
+    "ID": 715,
+    "Maquina": "W150E"
+  },
+  {
+    "ID": 716,
+    "Maquina": "W1600"
+  },
+  {
+    "ID": 717,
+    "Maquina": "WECO150"
+  },
+  {
+    "ID": 718,
+    "Maquina": "WELD&CUT160"
+  },
+  {
+    "ID": 719,
+    "Maquina": "WELDCUT160"
+  },
+  {
+    "ID": 720,
+    "Maquina": "WELD%CUT160"
+  },
+  {
+    "ID": 721,
+    "Maquina": "WELDER180"
+  },
+  {
+    "ID": 722,
+    "Maquina": "WURTH130"
+  },
+  {
+    "ID": 723,
+    "Maquina": "WELDTEAM"
+  },
+  {
+    "ID": 724,
+    "Maquina": "ZX160S"
+  },
+  {
+    "ID": 725,
+    "Maquina": "ZX7160"
+  },
+  {
+    "ID": 726,
+    "Maquina": "ZX7-160"
+  },
+  {
+    "ID": 727,
+    "Maquina": "ZX7-200"
+  },
+  {
+    "ID": 728,
+    "Maquina": "TELWIN168"
+  },
+  {
+    "ID": 729,
+    "Maquina": "È190DC"
+  }
+]

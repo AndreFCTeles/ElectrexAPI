@@ -1,0 +1,47 @@
+Request received for /api/postferias {
+   id: '39',
+   absence: {
+      id: '39-1-1',
+      start: '2024-07-09',
+      end: '2024-07-09',
+      busDays: 1
+   },
+   type: 'vacation'
+}                                                                                   
+Request received for /api/postferias {
+   id: '39',
+   absence: {
+      id: '39-2-1',
+      start: '2024-07-09',
+      end: '2024-07-09',
+      allDay: true,
+      busDays: 1
+   },
+   type: 'off-day'
+}                                                                                   
+Received eventId: 39 - 1 - 1
+updates: {
+   id: '39-2-2',
+      workerId: '39',
+         type: 'off-day',
+            start: '2024-07-09',
+               end: '2024-07-09',
+                  allDay: true,
+                     busDays: 1,
+                        absTime: 0,
+                           lunch: false
+}                                                                                   
+Parsed workerId: 39, absenceTypeCode: 1                                             
+Old Event: {
+   id: '39-1-1',
+      start: '2024-07-09',
+         end: '2024-07-09',
+            busDays: 1
+}     
+constructed event data: {
+   id: '39-2-2',
+      start: '2024-07-09',
+         end: '2024-07-09',
+            allDay: true,
+               busDays: 1
+}

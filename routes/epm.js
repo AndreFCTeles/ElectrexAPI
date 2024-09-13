@@ -1,32 +1,24 @@
-
 module.exports = (dbProdutosElectrex) => {
    const express = require('express');
    const router = express.Router();
    const handleError = require('../utils/handleError');
 
-   router.use(async (req, res, next) => {
-      next();
-   });
-   //console.log("epm.js router initialized with db:", dbProdutosElectrex.databaseName);
+   router.use(async (req, res, next) => { next(); });
+   //console.log("epm.js router inicializado com db:", dbProdutosElectrex.databaseName);
 
-   // Endpoint to get main categories with their subcategories
+   // Endpoint para buscar categorias
    router.get('/getcategories', async (req, res) => {
       try {
-         // Assuming 'ProdutosElectrex' is already connected to the MongoDB collection
-         const collection = dbProdutosElectrex.collection('CategoriasProd'); // Use your MongoDB collection name
-
-         // Fetch all categories and subcategories
+         const collection = dbProdutosElectrex.collection('CategoriasProd');
          const categories = await collection.find({}).toArray();
-
-         // Respond with the categories
          res.status(200).json({ categories });
       } catch (error) {
-         console.error("Failed to fetch categories:", error);
-         res.status(500).json({ error: 'Failed to fetch categories' });
+         console.error("Falha ao buscar categorias:", error);
+         res.status(500).json({ error: 'Falha ao buscar categorias' });
       }
    });
 
-   // Endpoint to get subcategories based on a selected category
+   // Endpoint para buscar subcategorias baseado na categoria selecionada
    router.get('/getsubcategories', async (req, res) => {
       const { mainCategory } = req.query;
 
@@ -37,28 +29,23 @@ module.exports = (dbProdutosElectrex) => {
          if (category && category.subCategories) {
             res.status(200).json({ subCategories: category.subCategories });
          } else {
-            res.status(404).json({ error: 'Subcategories not found' });
+            res.status(404).json({ error: 'Subcategoria(s) não encontrada(s)' });
          }
       } catch (error) {
-         console.error("Failed to fetch subcategories:", error);
-         res.status(500).json({ error: 'Failed to fetch subcategories' });
+         console.error("Falha ao buscar subcategorias:", error);
+         res.status(500).json({ error: 'Falha ao buscar subcategorias' });
       }
    });
 
 
    router.get('/gettechfields', async (req, res) => {
       try {
-         // Assuming 'ProdutosElectrex' is already connected to the MongoDB collection
-         const collection = dbProdutosElectrex.collection('Produtos'); // Use your MongoDB collection name
-
-         // Fetch all categories and subcategories
+         const collection = dbProdutosElectrex.collection('Produtos');
          const categories = await collection.find({}).toArray();
-
-         // Respond with the categories
          res.status(200).json({ categories });
       } catch (error) {
-         console.error("Failed to fetch categories:", error);
-         res.status(500).json({ error: 'Failed to fetch categories' });
+         console.error("Falha ao buscar dados técnicos:", error);
+         res.status(500).json({ error: 'Falha ao buscar dados técnicos' });
       }
    });
 

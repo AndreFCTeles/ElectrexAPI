@@ -6,24 +6,75 @@ module.exports = (dbJRMFerias) => {
    const handleError = require('../utils/handleError');
 
 
-   // Middleware to ensure DB connection
-   router.use(async (req, res, next) => {
-      next();
+
+
+   // Middleware para assegurar conexão à DB
+   router.use(async (req, res, next) => { next(); });
+   //console.log("Router ferias.js inicializado com db:", dbJRMFerias.databaseName);
+
+
+
+
+
+
+   /* |----- Função para verificar e atualizar avaDays anualmente -----| */
+   async function checkAndUpdateAnnualIncrements() {
+      const currentYear = new Date().getFullYear();
+      const dbIncrementoAnual = dbJRMFerias.collection('IncrementoAnual');
+      const globalSettings = await dbIncrementoAnual.findOne({ _id: "global" });
+
+      if (globalSettings && globalSettings.lastIncrementYear >= currentYear) {
+         console.log(`Incremento já foi realizado para ano corrente: ${globalSettings.lastIncrementYear}. A saltar atualização...`);
+         return;
+      }
+      try {
+         const collection = dbJRMFerias.collection('Funcionarios');
+         const workers = await collection.find({}).toArray();
+         for (const worker of workers) {
+            const days = 22;
+            worker.avaDays += days;  // Número de dias a incrementar
+            await collection.updateOne({ id: worker.id }, {
+               $set: { avaDays: worker.avaDays }
+            });
+            console.log(`Colaborador ${worker.id} recebeu +${days} para ausências. Dias atuais: ${worker.avaDays}`);
+         }
+         // Atualizar o último ano em que incremento foi realizado
+         await dbIncrementoAnual.updateOne(
+            { _id: "global" },
+            { $set: { lastIncrementYear: currentYear } }
+         );
+         console.log(`${workers.length} colaboradores atualizados para o ano ${currentYear}.`);
+      } catch (error) { console.error("Erro ao incrementar dias disponíveis: ", error); }
+   }
+
+   /* |----- Rota para Forçar a Atualização Anual -----| */
+   router.post('/incrementavadays', async (req, res) => {
+      console.log("POST request to /incrementavadays");
+
+      try {
+         await checkAndUpdateAnnualIncrements();
+         res.json({ message: "Incremento anual verificado e aplicado se necessário." });
+      } catch (error) {
+         res.status(500).json({ message: "Erro ao executar incremento anual", error });
+      }
    });
-   //console.log("ferias.js router initialized with db:", dbJRMFerias.databaseName);
+
+
+
+
 
 
    // |----- ENDPOINTS DE BUSCA -----|
 
    // API endpoint para receber dados de colaboradores e ausências - Férias
    router.get('/getferias', async (req, res) => {
-      console.log("GET request for /getferias");
+      console.log("GET request para /getferias");
       try {
-         console.log("Fetching data from the database...");
+         console.log("A buscar dados...");
          const collection = dbJRMFerias.collection('Funcionarios');
          const workers = await collection.find({}).toArray();
          //console.log("Data fetched:", workers);
-         console.log("Worker data fetched");
+         console.log(`Dados de colaborador buscados com sucesso: ${workers.length}`);
          res.json({ workers });
       } catch (error) { handleError(res, error, 'Erro ao buscar dados - Servidor'); }
    });

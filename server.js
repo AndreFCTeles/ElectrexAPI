@@ -5,7 +5,7 @@ require('dotenv').config(); // ------------------------------------------ Variá
 const express = require('express'); // ---------------------------------- Framework essencial para API
 //const { body, validationResult } = require('express-validator'); // --- Validação de dados
 const cors = require('cors'); // ---------------------------------------- Framework de busca de dados
-const cron = require('node-cron'); // ----------------------------------- Extensão para incremento periódico de dados (dias de férias)
+//const cron = require('node-cron'); // --------------------------------- Extensão para incremento periódico de dados (dias de férias)
 const { MongoClient } = require('mongodb'); // -------------------------- MongoDB driver
 //const fs = require('fs'); // ------------------------------------------ Permite recurso a sistemas de ficheiros
 const path = require('path'); // ---------------------------------------- Permite estabelecer caminhos diretos para sistemas de ficheiros

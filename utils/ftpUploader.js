@@ -1,15 +1,16 @@
 const ftp = require('basic-ftp');
 
-async function uploadFileToFTP(localFilePath, remoteFilePath) {
+async function uploadFileToFTP(localFilePath, remoteFilePath, username, userpassword) {
    const client = new ftp.Client();
-   client.ftp.verbose = true; // Optional, for debugging
+   const directory = "SYJRMATOS\\";
+   client.ftp.verbose = true; // debugging
 
    try {
       await client.access({
-         host: "192.168.0.10:80", // NAS IP
-         user: "yourFtpUsername",
-         password: "yourFtpPassword",
-         secure: false // or true if you're using FTPS
+         host: "192.168.0.10:2222", // NAS IP
+         user: `${directory}${username}`,
+         password: `${userpassword}`,
+         secure: false // true se SFTP, false para FTP
       });
 
       console.log(`Uploading ${localFilePath} to ${remoteFilePath}`);

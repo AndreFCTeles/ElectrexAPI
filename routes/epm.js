@@ -31,13 +31,15 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
          const { currentCategory } = await locateTargetParent(rootValue, parentValue);
 
          if (currentCategory) {
-            const existingValues = new Set(
+            const existingValues = currentCategory.subCategories ? new Set(
                currentCategory.subCategories.map((sub) => sub.value)
-            );
+            ) : null;
 
-            while (existingValues.has(uniqueValue)) {
-               uniqueValue = `${baseValue}_${counter}`;
-               counter++;
+            if (existingValues) {
+               while (existingValues.has(uniqueValue)) {
+                  uniqueValue = `${baseValue}_${counter}`;
+                  counter++;
+               }
             }
          }
       } else {
@@ -113,6 +115,7 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
 
    // Endpoint para buscar categorias
    router.get('/getCategories', async (req, res) => {
+      // de momento não utilizada em favor de /getCategoriasMongoose para alinhamento com Schema
       try {
          const collection = dbProdutosElectrex.collection('CategoriasProd');
          const categories = await collection.find({}).toArray();
@@ -223,9 +226,17 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
       console.log('Request Body for /addCategory:', req.body);
 
       try {
+         const newCategoryData = {
+            label: categoryData.label,
+            value: await generateUniqueValue(Category, categoryData.label, parentValue),
+            technical: categoryData.technical || [],
+            subCategories: categoryData.subCategories || [],
+            format: categoryData.format || [],
+         };
+
          if (!parentValue) { // root-level
-            categoryData.value = await generateUniqueValue(Category, categoryData.label, null);
-            const rootCategory = new Category(categoryData);
+            //newCategoryData.value = await generateUniqueValue(Category, categoryData.label, null);
+            const rootCategory = new Category(newCategoryData);
             await rootCategory.save();
             console.log('Root-level category successfully added:', JSON.stringify(rootCategory, null, 2));
             return res.status(201).json({ message: 'Category added successfully', category: rootCategory });
@@ -235,19 +246,16 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
          const { rootCategory, currentCategory } = await locateTargetParent(parentValue.split('-')[0], parentValue);
 
          // Generate a unique value for the new category
-         const newCategory = {
-            ...categoryData,
-            value: await generateUniqueValue(Category, categoryData.label, parentValue),
-         };
+         //newCategoryData.value = await generateUniqueValue(Category, categoryData.label, parentValue);
 
-         currentCategory.subCategories.push(newCategory);
+         currentCategory.subCategories.push(newCategoryData);
          console.log(`Updated parent after adding new subcategory: ${JSON.stringify(currentCategory, null, 2)}`);
 
          rootCategory.markModified('subCategories');
          await rootCategory.save();
 
-         console.log('Subcategory successfully added:', JSON.stringify(newCategory, null, 2));
-         res.status(201).json({ message: 'Category added successfully', category: newCategory });
+         console.log('Subcategory successfully added:', JSON.stringify(newCategoryData, null, 2));
+         res.status(201).json({ message: 'Category added successfully', category: newCategoryData });
       } catch (error) {
          console.error('Error adding category:', error);
          res.status(500).json({ error: error.message });
@@ -259,38 +267,32 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
       console.log('Request Body for /addQuickCategory:', req.body);
 
       try {
+         const newCategoryData = {
+            label: label,
+            value: await generateUniqueValue(Category, label, parentValue),
+            technical: [],
+            subCategories: [],
+            format: [],
+         };
          if (!parentValue) { // root-level
-            const rootCategory = new Category({
-               label,
-               value: await generateUniqueValue(Category, label, null),
-               technical: [],
-               subCategories: [],
-               format: []
-            });
-            await rootCategory.save();
-            console.log('Root-level category successfully added:', JSON.stringify(rootCategory, null, 2));
-            return res.status(201).json({ message: 'Quick category added successfully', category: rootCategory });
+            await newCategoryData.save();
+            console.log('Root-level category successfully added:', JSON.stringify(newCategoryData, null, 2));
+            return res.status(201).json({ message: 'Quick category added successfully', category: newCategoryData });
          }
 
          console.log(`Adding subcategory under parentValue: ${parentValue}`);
          const { rootCategory, currentCategory } = await locateTargetParent(parentValue.split('-')[0], parentValue);
 
-         const newSubcategory = {
-            label,
-            value: await generateUniqueValue(Category, label, parentValue),
-            technical: [],
-            subCategories: [],
-            format: []
-         };
+         console.log(`Trying to push new subCategory: ${JSON.stringify(newCategoryData, null, 2)}`);
 
-         await currentCategory.subCategories.push(newSubcategory);
+         await currentCategory.subCategories.push(newCategoryData);
          console.log(`Updated parent after adding new subcategory: ${JSON.stringify(currentCategory, null, 2)}`);
 
          rootCategory.markModified('subCategories');
          await rootCategory.save();
 
-         console.log('Subcategory successfully added:', JSON.stringify(newSubcategory, null, 2));
-         res.status(201).json({ message: 'Quick subcategory added successfully', category: newSubcategory });
+         console.log('Subcategory successfully added:', JSON.stringify(newCategoryData, null, 2));
+         res.status(201).json({ message: 'Quick subcategory added successfully', category: newCategoryData });
       } catch (error) {
          console.error('Error adding quick category:', error);
          res.status(500).json({ error: error.message });
@@ -475,6 +477,19 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
 
    // Eliminar dado técnico
    router.delete('/deleteTechnicalField/:field', async (req, res) => {
+      const { field } = req.params;
+      try {
+         const collection = dbProdutosElectrex.collection('DadosTecProd');
+         await collection.deleteOne({ field });
+
+         res.status(200).json({ message: 'Campo técnico deletado com sucesso' });
+      } catch (error) {
+         console.error('Erro ao deletar campo técnico:', error);
+         res.status(500).json({ error: 'Erro ao deletar campo técnico' });
+      }
+   });
+   // Eliminar todas as referências a dado técnico
+   router.delete('/nukeTechnicalField/:field', async (req, res) => {
       const { field } = req.params;
       try {
          const collection = dbProdutosElectrex.collection('DadosTecProd');

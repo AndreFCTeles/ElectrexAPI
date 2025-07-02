@@ -1,20 +1,21 @@
 /* |----- INICIALIZAÇÃO DO SERVIDOR -----| */
 
 // Importação de frameworks
-require('dotenv').config(); // ------------------------------------------ Variáveis de ambiente
-const express = require('express'); // ---------------------------------- Framework essencial para API
-const cors = require('cors'); // ---------------------------------------- Framework de busca de dados
-const { MongoClient } = require('mongodb'); // -------------------------- MongoDB driver
-const mongoose = require('mongoose'); // -------------------------------- Esquemas para construção de dados
-const path = require('path'); // ---------------------------------------- Permite estabelecer caminhos diretos para sistemas de ficheiros
-const buildPath = path.join(__dirname, '..', 'JRMFerias', 'build'); //--- Caminhos para aplicação WEB JRMFérias
-const dayjs = require('dayjs'); // -------------------------------------- Facilita gestão de datas
+require('dotenv').config(); // ------------------------------------------- Variáveis de ambiente
+const express = require('express'); // ----------------------------------- Framework essencial para API
+const cors = require('cors'); // ----------------------------------------- Framework de busca de dados
+const { MongoClient } = require('mongodb'); // --------------------------- MongoDB driver
+const mongoose = require('mongoose'); // --------------------------------- Esquemas para construção de dados
+const path = require('path'); // ----------------------------------------- Permite estabelecer caminhos diretos para sistemas de ficheiros
+const buildPath = path.join(__dirname, '..', 'JRMFerias', 'build'); // --- Caminhos para aplicação WEB JRMFérias
+const dayjs = require('dayjs'); // --------------------------------------- Facilita gestão de datas
 
 // Módulos API
-const handleError = require('./utils/handleError'); // ------------------ Módulo handling de erros
-const feriasRoutes = require('./routes/ferias'); // --------------------- Módulo para aplicação JRMFérias
-const repairRoutes = require('./routes/repair'); // --------------------- Módulo para aplicação RepairGest v2
-const epmRoutes = require('./routes/EPM'); // --------------------------- Módulo para aplicação ElectrexProductManager
+const handleError = require('./utils/handleError'); // ------------------- Módulo handling de erros
+const credRoutes = require('./routes/cred'); // -------------------------- Módulo para credenciais de autenticação
+const feriasRoutes = require('./routes/ferias'); // ---------------------- Módulo para aplicação JRMFérias
+const repairRoutes = require('./routes/repair'); // ---------------------- Módulo para aplicação RepairGest v2
+const epmRoutes = require('./routes/epm'); // ---------------------------- Módulo para aplicação ElectrexProductManager
 
 
 // Configuração do servidor
@@ -23,13 +24,13 @@ const port = process.env.PORT || 3000;
 const uri = process.env.MONGODB_URI; // URI para conectar a MongoDB
 
 // Bases de dados
-let dbJRMFerias, dbRepairData, dbProdutosElectrex;
+let dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex;
 
 // Inicialização de middleware
-app.use(express.json());  // ------------------------------------------- Funcionalidades básicas Express para funcionalidades do servidor
-//app.use(express.urlencoded({ extended: true })); // ------------------ Permite decompor URLs para melhor POST de dados de formulários
-app.use(cors()); // ---------------------------------------------------- CORS básico para cross-referencing de origens cliente-servidor
-app.use(express.static(buildPath)); // --------------------------------- Permite servir ficheiros estáticos
+app.use(express.json()); // --------------------------------------------- Funcionalidades básicas Express para funcionalidades do servidor
+//app.use(express.urlencoded({ extended: true })); // ------------------- Permite decompor URLs para melhor POST de dados de formulários
+app.use(cors()); // ----------------------------------------------------- CORS básico para cross-referencing de origens cliente-servidor
+app.use('/ferias', express.static(buildPath)); // ----------------------- Permite servir ficheiros estáticos
 
 
 
@@ -42,7 +43,7 @@ app.use(express.static(buildPath)); // --------------------------------- Permite
 const listEndpoints = require('express-list-endpoints');
 //console.log(listEndpoints(app));
 
-/* |----- Conectar ao MongoDB / Base de dados -----| */
+// Util para formato data/hora
 function getCurrentDateTime() { return dayjs().format('HH:mm, DD/MM/YYYY'); }
 
 
@@ -57,15 +58,17 @@ async function connectToMongoDB() {
    const client = new MongoClient(driverUri);
    try {
       await client.connect();
+      dbCredenciais = client.db('CredenciaisElectrex');
       dbJRMFerias = client.db('JRMFerias');
       dbRepairData = client.db('Repair');
       dbProdutosElectrex = client.db('ProdutosElectrex');
 
       // Testar conexões
+      console.log("Conectado à MongoDB: ", dbCredenciais.databaseName);
       console.log("Conectado à MongoDB: ", dbJRMFerias.databaseName);
       console.log("Conectado à MongoDB: ", dbRepairData.databaseName);
       console.log("Conectado à MongoDB: ", dbProdutosElectrex.databaseName);
-      return { dbJRMFerias, dbRepairData, dbProdutosElectrex };
+      return { dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex };
    } catch (error) {
       console.error("Erro ao conectar à MongoDB: ", error.message);
       throw error;
@@ -88,8 +91,10 @@ async function connectToMongoose() {
 /* |----- Inicializar Endpoints / Routers -----| */
 Promise.all([connectToMongoDB(), connectToMongoose()])
    .then(([mongoResult]) => {
-      const { dbJRMFerias, dbRepairData, dbProdutosElectrex } = mongoResult;
+      const { dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex } = mongoResult;
+
       // API Endpoints/Routes para servir aplicações
+      app.use('/api/cred', credRoutes(dbCredenciais));
       app.use('/api/ferias', feriasRoutes(dbJRMFerias));
       app.use('/api/repair', repairRoutes(dbRepairData));
       app.use('/api/epm', epmRoutes(dbProdutosElectrex, dayjs, mongoose));
@@ -118,6 +123,7 @@ Promise.all([connectToMongoDB(), connectToMongoose()])
             .catch(error => console.error('Erro ao chamar /incrementavadays:', error));
       });
    }).catch((error) => {
-      console.error('Falha na conexão ao MongoDB:', error.message);
+      const currentDateTime = getCurrentDateTime();
+      console.error(`${currentDateTime} - Falha na conexão ao MongoDB:`, error.message);
       process.exit(1); // Encerrar aplicação em caso de falha na conexão
    });

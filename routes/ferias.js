@@ -1,6 +1,6 @@
 module.exports = (dbJRMFerias) => {
    const express = require('express');
-   //const { body, validationResult } = require('express-validator');
+   const { body, validationResult } = require('express-validator');
    const router = express.Router();
    const generateUniqueId = require('../utils/generateUniqueId');
    const handleError = require('../utils/handleError');
@@ -50,7 +50,6 @@ module.exports = (dbJRMFerias) => {
    /* |----- Rota para Forçar a Atualização Anual -----| */
    router.post('/incrementavadays', async (req, res) => {
       console.log("POST request to /incrementavadays");
-
       try {
          await checkAndUpdateAnnualIncrements();
          res.json({ message: "Incremento anual verificado e aplicado se necessário." });
@@ -66,6 +65,15 @@ module.exports = (dbJRMFerias) => {
 
    // |----- ENDPOINTS DE BUSCA -----|
 
+   // API endpoint para receber dados de login - Férias
+   router.get('/getloginferias', async (req, res) => {
+      try {
+         const collection = dbJRMFerias.collection('Credenciais');
+         const credentials = await collection.find({}).toArray();
+         res.json({ credentials });
+      } catch (error) { handleError(res, error, 'Erro ao buscar dados de login - Servidor'); }
+   });
+
    // API endpoint para receber dados de colaboradores e ausências - Férias
    router.get('/getferias', async (req, res) => {
       console.log("GET request para /getferias");
@@ -78,15 +86,6 @@ module.exports = (dbJRMFerias) => {
          res.json({ workers });
       } catch (error) { handleError(res, error, 'Erro ao buscar dados - Servidor'); }
    });
-   // API endpoint para receber dados de login - Férias
-   router.get('/getloginferias', async (req, res) => {
-      try {
-         const collection = dbJRMFerias.collection('Credenciais');
-         const credentials = await collection.find({}).toArray();
-         res.json({ credentials });
-      } catch (error) { handleError(res, error, 'Erro ao buscar dados de login - Servidor'); }
-   });
-
 
    // |----- ENDPOINTS DE ESCRITA -----|
 

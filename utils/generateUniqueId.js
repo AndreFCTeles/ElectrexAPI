@@ -3,4 +3,9 @@ function generateUniqueId(workers) {
    const maxId = Math.max(...workers.map(worker => parseInt(worker.id, 10)));
    return (maxId + 1).toString();
 }
-module.exports = generateUniqueId;
+
+function getCurrentDateTime() {
+   return dayjs().format('HH:mm, DD/MM/YYYY');
+}
+
+module.exports = generateUniqueId, getCurrentDateTime;

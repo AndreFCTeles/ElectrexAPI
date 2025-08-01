@@ -19,6 +19,8 @@
     "express-list-endpoints": "^7.1.0",
     "express-validator": "^7.2.0",
     "mongoose": "^8.9.5",
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }

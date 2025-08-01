@@ -4,8 +4,4 @@ function generateUniqueId(workers) {
    return (maxId + 1).toString();
 }
 
-function getCurrentDateTime() {
-   return dayjs().format('HH:mm, DD/MM/YYYY');
-}
-
-module.exports = generateUniqueId, getCurrentDateTime;
+module.exports = generateUniqueId;

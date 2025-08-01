@@ -3,6 +3,7 @@
 // Importação de frameworks
 require('dotenv').config(); // ------------------------------------------- Variáveis de ambiente
 const express = require('express'); // ----------------------------------- Framework essencial para API
+const swaggerUi = require('swagger-ui-express'); // ---------------------- Framework de documentação/teste
 const cors = require('cors'); // ----------------------------------------- Framework de busca de dados
 const { MongoClient } = require('mongodb'); // --------------------------- MongoDB driver
 const mongoose = require('mongoose'); // --------------------------------- Esquemas para construção de dados
@@ -11,12 +12,12 @@ const buildPath = path.join(__dirname, '..', 'JRMFerias', 'build'); // --- Camin
 const dayjs = require('dayjs'); // --------------------------------------- Facilita gestão de datas
 
 // Módulos API
+const swaggerSpec = require('./middleware/swagger/swaggerOptions'); // --- Módulo de configuração (documentação/teste)
 const handleError = require('./utils/handleError'); // ------------------- Módulo handling de erros
 const credRoutes = require('./routes/cred'); // -------------------------- Módulo para credenciais de autenticação
 const feriasRoutes = require('./routes/ferias'); // ---------------------- Módulo para aplicação JRMFérias
 const repairRoutes = require('./routes/repair'); // ---------------------- Módulo para aplicação RepairGest v2
 const epmRoutes = require('./routes/epm'); // ---------------------------- Módulo para aplicação ElectrexProductManager
-
 
 // Configuração do servidor
 const app = express();
@@ -25,6 +26,10 @@ const uri = process.env.MONGODB_URI; // URI para conectar a MongoDB
 
 // Bases de dados
 let dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex;
+// Schemas Mongoose para base de dados
+const createCredModel = require('./schemas/Credentials');
+const createProdModel = require('./schemas/Category');
+
 
 // Inicialização de middleware
 app.use(express.json()); // --------------------------------------------- Funcionalidades básicas Express para funcionalidades do servidor
@@ -76,30 +81,88 @@ async function connectToMongoDB() {
 }
 
 /* |----- Conectar ao MongoDB com Mongoose -----| */
-async function connectToMongoose() {
+function connectToMongooseCred() {
+   return new Promise((resolve, reject) => {
+      const credConnectionUri = uri + 'CredenciaisElectrex?authSource=admin';
+      const conn = mongoose.createConnection(credConnectionUri); // , { useNewUrlParser: true, useUnifiedTopology: true }
+      conn.once('open', () => {
+         console.log('Mongoose connected to CredenciaisElectrex');
+         //const CredentialModel = conn.model('Credential', credentialSchema);
+         const CredentialModel = createCredModel(conn);
+         resolve(CredentialModel);
+      });
+      conn.on('error', reject);
+   });
+}
+function connectToMongooseProd() {
+   return new Promise((resolve, reject) => {
+      const prodConnectionUri = uri + 'ProdutosElectrex?authSource=admin';
+      const conn = mongoose.createConnection(prodConnectionUri); // , { useNewUrlParser: true, useUnifiedTopology: true }
+      conn.once('open', () => {
+         console.log('Mongoose connected to ProdutosElectrex');
+         //const ProductModel = conn.model('Product', categorySchema);
+         const ProductModel = createProdModel(conn);
+         resolve(ProductModel);
+      });
+      conn.on('error', reject);
+   });
+}
+
+/*
+async function connectToMongooseProd() {
    try {
-      const connectionUri = uri + 'ProdutosElectrex?authSource=admin';
-      await mongoose.connect(connectionUri);
+      prodConnectionUri = uri + 'ProdutosElectrex?authSource=admin';
+      await mongoose.connect(prodConnectionUri);
       console.log('Connected to MongoDB with Mongoose:', mongoose.connection.name);
    } catch (error) {
       console.error('Erro ao conectar o Mongoose ao MongoDB:', error.message);
       throw error;
    }
 }
+*/
 
 
 /* |----- Inicializar Endpoints / Routers -----| */
-Promise.all([connectToMongoDB(), connectToMongoose()])
-   .then(([mongoResult]) => {
+Promise.all([
+   connectToMongoDB(),
+   connectToMongooseCred(),
+   connectToMongooseProd()
+])
+   .then(([mongoResult, CredentialModel, ProductModel]) => {
       const { dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex } = mongoResult;
 
+      // API Endpoints/Routes para servir documentação
+      app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
       // API Endpoints/Routes para servir aplicações
-      app.use('/api/cred', credRoutes(dbCredenciais));
+      app.use('/api/cred', credRoutes(dbCredenciais, dayjs, CredentialModel));
       app.use('/api/ferias', feriasRoutes(dbJRMFerias));
       app.use('/api/repair', repairRoutes(dbRepairData));
-      app.use('/api/epm', epmRoutes(dbProdutosElectrex, dayjs, mongoose));
+      app.use('/api/epm', epmRoutes(dbProdutosElectrex, dayjs, ProductModel));
 
-      // API Endpoints generalista para buscar data/hora
+
+      /**
+       * @openapi
+       * /currentDateTime:
+       *    get:
+       *       summary: API Endpoint generalista para buscar data/hora
+       *       description: Busca data e hora atuais como string ISO, não formatado
+       *       tags:
+       *          - Geral
+       *       responses:
+       *          '200':
+       *             description: Sucesso ao buscar data e hora
+       *             content:
+       *                'application/json':
+       *                   schema:
+       *                      type: object
+       *                      properties:
+       *                         dateTime:
+       *                            type: string
+       *                            example: "2025-07-08T08:46:04.660Z"
+       *          '500':
+       *             description: Erro de servidor/API ao buscar data/hora
+       */
       app.get('/api/currentDateTime', (req, res) => {
          try {
             const currentDateTime = new Date();

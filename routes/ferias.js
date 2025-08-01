@@ -87,6 +87,15 @@ module.exports = (dbJRMFerias) => {
       } catch (error) { handleError(res, error, 'Erro ao buscar dados - Servidor'); }
    });
 
+   // API endpoint para receber dados de colaboradores e ausências - Férias
+   router.get('/getdepartments', async (req, res) => {
+      try {
+         const depCollection = dbJRMFerias.collection('Departamentos');
+         const departments = await depCollection.find({}).toArray();
+         res.json({ departments });
+      } catch (error) { handleError(res, error, 'Erro ao buscar departamentos'); }
+   });
+
    // |----- ENDPOINTS DE ESCRITA -----|
 
    // FÉRIAS - EVENTOS
@@ -120,20 +129,26 @@ module.exports = (dbJRMFerias) => {
    // API endpoint para escrita de dados de colaboradores - Férias
    router.post('/novocolab', async (req, res) => {
       const { title, dep, color, avaDays } = req.body;
-      if (!title) { return res.status(400).json({ message: 'Obrigatório introduzir nome - Servidor' }); }
+      if (!title || !dep) { return res.status(400).json({ message: 'Obrigatório introduzir nome e departamento - Servidor' }); }
       try {
-         const collection = dbJRMFerias.collection('Funcionarios');
-         const workers = await collection.find({}).toArray();
+         const workCollection = dbJRMFerias.collection('Funcionarios');
+         const depCollection = dbJRMFerias.collection('Departamentos');
+
+         let department = await depCollection.findOne({ depName: dep });
+         if (!department) { await depCollection.insertOne({ depName: dep, depDefColor: color }); }
+
+         const worker = await workCollection.find({}).toArray();
          const newWorker = {
-            id: generateUniqueId(workers), // Generate unique ID based on existing workers
+            id: generateUniqueId(worker), // Gerar ID único, com base nos colaboradores existentes
             title,
+            displayName,
             dep,
             vacations: [],
             offDays: [],
             color,
             avaDays
          };
-         await collection.insertOne(newWorker);
+         await workCollection.insertOne(newWorker);
          res.json({ message: 'Colaborador adicionado com sucesso - Servidor' });
       } catch (error) { handleError(res, error, 'Erro ao adicionar colaborador - Servidor'); }
    });
@@ -213,9 +228,24 @@ module.exports = (dbJRMFerias) => {
       const { id } = req.params;
       const updates = req.body;
       try {
-         const collection = dbJRMFerias.collection('Funcionarios');
-         const result = await collection.updateOne({ id }, { $set: updates });
+         const workCollection = dbJRMFerias.collection('Funcionarios');
+         const depCollection = dbJRMFerias.collection('Departamentos');
+
+         // verificar dados de colaborador atuais
+         const worker = await workCollection.findOne({ id });
+         if (!worker) { return res.status(404).json({ message: 'Colaborador não encontrado - Servidor' }); }
+         const originalDep = worker.dep;
+
+         // update
+         const result = await workCollection.updateOne({ id }, { $set: updates });
          if (result.matchedCount === 0) { return res.status(404).json({ message: 'Colaborador não encontrado - Servidor' }); }
+
+         // se departamento mudou, verificar se departamento é órfão
+         if (updates.dep && updates.dep !== originalDep) {
+            const remaining = await workCollection.countDocuments({ dep: originalDep }); // contar quantos colaboradores têm o dep
+            if (remaining === 0) { await depCollection.deleteOne({ depName: originalDep }); } // eliminar dep órfão
+         }
+
          res.json({ message: 'Colaborador atualizado com sucesso' });
       } catch (error) { handleError(res, error, 'Erro ao atualizar dados de colaborador - Servidor'); }
    });
@@ -258,10 +288,21 @@ module.exports = (dbJRMFerias) => {
    router.delete('/eliminarColab/:id', async (req, res) => {
       const { id } = req.params;
       try {
-         const collection = dbJRMFerias.collection('Funcionarios');
-         const result = await collection.deleteOne({ id });
+         const workCollection = dbJRMFerias.collection('Funcionarios');
+         const depCollection = dbJRMFerias.collection('Departamentos');
 
-         if (result.deletedCount === 0) { return res.status(404).json({ message: 'Colaborador não encontrado - Servidor' }); }
+         const worker = await workCollection.findOne({ id });
+         if (!worker) { return res.status(404).json({ message: 'Colaborador não encontrado - Servidor' }); }
+
+         const depName = worker.dep;
+         const result = await workCollection.deleteOne({ id });
+         if (result.deletedCount === 0) { return res.status(404).json({ message: 'Falha ao eliminar colaborador - Servidor' }); }
+
+         // Eliminar departamento
+         const workerCount = await workCollection.countDocuments({ dep: depName });
+         if (workerCount === 0) { await depCollection.deleteOne({ depName }); }
+
+
          res.json({ message: 'Colaborador eliminado com sucesso' });
       } catch (error) {
          handleError(res, error, 'Erro ao eliminar colaborador - Servidor');

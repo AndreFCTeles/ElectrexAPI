@@ -26,7 +26,7 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
       let uniqueValue = baseValue;
       let counter = 1;
       const rootValue = parentValue ? parentValue.split('-')[0] : null;
-      // Locate the root and parent category
+      // Localizar raíz e parent category
       if (rootValue) {
          const { currentCategory } = await locateTargetParent(rootValue, parentValue);
 
@@ -43,7 +43,7 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
             }
          }
       } else {
-         // For root-level categories
+         // Para categorias ao nível da raiz
          while (await Category.findOne({ value: uniqueValue })) {
             uniqueValue = `${baseValue}_${counter}`;
             counter++;
@@ -168,7 +168,7 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
       try {
          const collection = dbProdutosElectrex.collection('Produtos');
          const products = await collection.find({}).toArray();
-         const technicalFields = [...new Set( //Extrair dados técnicos
+         const technicalFields = [...new Set( // Extrair dados técnicos
             products.flatMap(product => product.technical.map(field => field.field))
          )];
          res.status(200).json({ technicalFields });
@@ -245,7 +245,7 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
          console.log(`Adding subcategory under parentValue: ${parentValue}`);
          const { rootCategory, currentCategory } = await locateTargetParent(parentValue.split('-')[0], parentValue);
 
-         // Generate a unique value for the new category
+         // Gerar um valor única para a nova categoria
          //newCategoryData.value = await generateUniqueValue(Category, categoryData.label, parentValue);
 
          currentCategory.subCategories.push(newCategoryData);
@@ -322,11 +322,11 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
          productData.updatedDate = dayjs().toISOString();
 
          const collection = dbProdutosElectrex.collection('Produtos');
-         const result = await collection.insertOne(productData); // Insert product without images
+         const result = await collection.insertOne(productData); // Inserir produto sem imagens
 
          res.status(201).json({
             message: 'Produto adicionado com sucesso',
-            id: result.insertedId, // Return the new product ID
+            id: result.insertedId, // Retorna o novo ID do produto
          });
       } catch (error) {
          console.error('Erro ao adicionar produto:', error);
@@ -407,7 +407,7 @@ module.exports = (dbProdutosElectrex, dayjs, mongooseConnection) => {
 
    // Editar dados de produto
    router.patch('/updateProduct/:id', async (req, res) => {
-      const productId = req.params.id; // Should be a string
+      const productId = req.params.id;
       const updatedProductData = req.body;
       delete updatedProductData._id;
 

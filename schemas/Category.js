@@ -1,6 +1,8 @@
+const mongoose = require('mongoose');
+
 module.exports = (mongooseConnection) => {
-   const categorySchema = new mongooseConnection.Schema({
-      _id: { type: mongooseConnection.Schema.Types.ObjectId, auto: true },
+   const categorySchema = new mongoose.Schema({
+      _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
       label: { type: String, required: true },
       value: { type: String, required: true, unique: true },
       technical: { type: [String], default: [] },

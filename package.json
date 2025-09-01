@@ -13,13 +13,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dayjs": "^1.11.13",
-    "dotenv": "^16.4.5",
+    "dotenv": "^17.2.1",
     "electrexserverapi": "file:",
-    "express": "^4.20.0",
-    "express-list-endpoints": "^7.1.0",
+    "express": "^5.1.0",
     "express-validator": "^7.2.0",
     "mongoose": "^8.9.5",
-    "node-cron": "^3.0.3",
+    "node-cron": "^4.2.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   }

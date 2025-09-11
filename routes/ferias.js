@@ -51,11 +51,17 @@ module.exports = (dbJRMFerias) => {
    }
 
 
+   /* |----- Util de deteção de fecho da empresa -----| */
+   const BUSINESS_WORKER_ID = '1'; // Electrex (dep: JRMatos)
 
-
-
-
-
+   // Computação de dias de ausência em função de eventos Electrex (decrementa avaDays a todos os workers)
+   const computeDeductionDaysForAbsence = (abs) => {
+      // Contar avadays (apenas dias úteis não parciais)
+      // Prioridade - especificar busDays se providenciado, senão:
+      if (typeof abs?.busDays === 'number' && abs.busDays >= 0) return abs.busDays;
+      if (abs?.allDay === true) return 1; // Fallbacks - cria ausências parciais (off-day) sem busDays (dias úteis)
+      return 0; // ausências parciais não afetam avaDays
+   }
 
 
 
@@ -69,7 +75,7 @@ module.exports = (dbJRMFerias) => {
     * /ferias/getloginferias:
     *   get:
     *     summary: Obter credenciais internas do módulo Férias
-    *     description: Devolve a coleção interna de credenciais (uso administrativo/testes).
+    *     description: (Depreciado pelo novo sistema de login) Devolve a coleção interna de credenciais (uso administrativo/testes).
     *     tags: [Ferias]
     *     responses:
     *       200:
@@ -154,6 +160,10 @@ module.exports = (dbJRMFerias) => {
       } catch (error) { handleError(res, error, `${getCurrentDateTime()} - Erro ao buscar departamentos`); }
    });
 
+
+
+
+
    // |----- ENDPOINTS DE ESCRITA -----|
 
    /* |----- Rota para Forçar a Atualização Anual -----| */
@@ -227,6 +237,21 @@ module.exports = (dbJRMFerias) => {
          } else { return handleError(res, null, `${getCurrentDateTime()} - Tipo inválido - Servidor`); }
 
          await collection.updateOne({ id }, { $set: worker });
+         if (id === BUSINESS_WORKER_ID) {
+            let deduction = 0;
+            if (type === 'vacation') {
+               deduction = computeDeductionDaysForAbsence(absence);
+            } else if (type === 'off-day' && absence.allDay) {
+               deduction = computeDeductionDaysForAbsence(absence);
+            }
+
+            if (deduction > 0) {
+               await dbJRMFerias.collection('Funcionarios').updateMany(
+                  { id: { $ne: BUSINESS_WORKER_ID } },
+                  { $inc: { avaDays: -deduction } }
+               );
+            }
+         }
          res.json({ message: `${getCurrentDateTime()} - Ausência adicionada com sucesso - Servidor` });
       } catch (error) {
          handleError(res, error, `${getCurrentDateTime()} - Erro ao adicionar ausência - Servidor`);
@@ -303,6 +328,9 @@ module.exports = (dbJRMFerias) => {
    });
 
 
+
+
+
    // |----- ENDPOINTS DE ATUALIZAÇÃO -----|
 
    // FÉRIAS - EVENTOS
@@ -355,6 +383,17 @@ module.exports = (dbJRMFerias) => {
             else { worker.compH = (worker.compH || 0) - (oldEvent.absTime || 0); }
          }
 
+         // Determinar se worker é Electrex
+         const isBusiness = workerId === BUSINESS_WORKER_ID;
+         let oldDeduction = 0;
+         if (isBusiness) {
+            if (currentEventType === 'vacations') {
+               oldDeduction = computeDeductionDaysForAbsence(oldEvent);
+            } else if (currentEventType === 'offDays' && oldEvent.allDay) {
+               oldDeduction = computeDeductionDaysForAbsence(oldEvent);
+            }
+         }
+
          let updatedEvent;
          if (newEventType === 'vacations') {
             updatedEvent = {
@@ -391,7 +430,25 @@ module.exports = (dbJRMFerias) => {
             worker[newEventType].push(updatedEvent);
          } else { worker[currentEventType].splice(eventIndex, 1, updatedEvent); } // Atualizar evento no array
 
+         let newDeduction = 0;
+         if (isBusiness) {
+            if (newEventType === 'vacations') {
+               newDeduction = computeDeductionDaysForAbsence(updatedEvent);
+            } else if (newEventType === 'offDays' && updatedEvent.allDay) {
+               newDeduction = computeDeductionDaysForAbsence(updatedEvent);
+            }
+         }
+
          await collection.updateOne({ id: workerId }, { $set: worker });
+         if (isBusiness) {
+            const delta = newDeduction - oldDeduction; // + => take more, − => give back
+            if (delta !== 0) {
+               await dbJRMFerias.collection('Funcionarios').updateMany(
+                  { id: { $ne: BUSINESS_WORKER_ID } },
+                  { $inc: { avaDays: -delta } }
+               );
+            }
+         }
          res.json({ message: `${getCurrentDateTime()} - Evento atualizado com sucesso`, event: updatedEvent });
       } catch (error) { handleError(res, error, `${getCurrentDateTime()} - Erro ao atualizar dados de evento - Servidor`); }
    });
@@ -474,6 +531,10 @@ module.exports = (dbJRMFerias) => {
    });
 
 
+
+
+
+
    // |----- ENDPOINTS DE REMOÇÃO -----|
 
    // FÉRIAS - EVENTOS
@@ -519,6 +580,22 @@ module.exports = (dbJRMFerias) => {
          // Remover evento
          eventList.splice(eventIndex, 1);
          await collection.updateOne({ id: workerId }, { $set: worker });
+         const isBusiness = workerId === BUSINESS_WORKER_ID;
+         if (isBusiness) {
+            let restore = 0;
+            if (eventType === 'vacations') {
+               restore = computeDeductionDaysForAbsence(oldEvent);
+            } else if (eventType === 'offDays' && oldEvent.allDay) {
+               restore = computeDeductionDaysForAbsence(oldEvent);
+            }
+
+            if (restore > 0) {
+               await dbJRMFerias.collection('Funcionarios').updateMany(
+                  { id: { $ne: BUSINESS_WORKER_ID } },
+                  { $inc: { avaDays: +restore } }
+               );
+            }
+         }
          res.json({ message: `${getCurrentDateTime()} - Evento eliminado com sucesso` });
       } catch (error) { handleError(res, error, `${getCurrentDateTime()} - Erro ao eliminar evento - Servidor`); }
    });

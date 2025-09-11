@@ -896,7 +896,7 @@ module.exports = (dbCredenciais, dayjs, mongooseConnection) => {
     * @openapi
     * /auth/updateuser/{id}/apps/{app}:
     *   delete:
-    *     summary: Remove an app entry from a user
+    *     summary: Remover acesso a aplicação de um utilizador
     *     tags: [Cred]
     *     parameters:
     *       - in: path

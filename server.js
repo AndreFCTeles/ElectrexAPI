@@ -19,6 +19,7 @@ const credRoutes = require('./routes/cred'); // -------------------------- Módu
 const feriasRoutes = require('./routes/ferias'); // ---------------------- Módulo para aplicação JRMFérias
 const repairRoutes = require('./routes/repair'); // ---------------------- Módulo para aplicação RepairGest v2
 const epmRoutes = require('./routes/epm'); // ---------------------------- Módulo para aplicação ElectrexProductManager
+const bRoutes = require('./routes/banca'); // ---------------------------- Módulo para aplicação <app testes banca de carga>
 //const handleError = require('./utils/handleError'); // ----------------- Util para handling de erros
 const getCurrentDateTime = require('./utils/currentTime') // ------------- Util simples para obter hora atual
 
@@ -28,7 +29,7 @@ const port = process.env.PORT || 3000;
 const uri = process.env.MONGODB_URI; // URI para conectar a MongoDB
 
 // Bases de dados
-let dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex;
+let dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex; //dbBanca
 // Schemas Mongoose para base de dados
 const createCredModel = require('./schemas/Credentials');
 const createProdModel = require('./schemas/Category');
@@ -73,6 +74,7 @@ async function connectToMongoDB() {
    dbJRMFerias = client.db('JRMFerias');
    dbRepairData = client.db('Repair');
    dbProdutosElectrex = client.db('ProdutosElectrex');
+   //dbBancaElectrex = client.db('Banca');
 
    // Testar conexões
    console.log(`${getCurrentDateTime()}`);
@@ -80,8 +82,9 @@ async function connectToMongoDB() {
    console.log("Conectado à MongoDB: ", dbJRMFerias.databaseName);
    console.log("Conectado à MongoDB: ", dbRepairData.databaseName);
    console.log("Conectado à MongoDB: ", dbProdutosElectrex.databaseName);
+   //console.log("Conectado à MongoDB: ", dbBancaElectrex.databaseName);
 
-   return { dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex };
+   return { dbCredenciais, dbJRMFerias, dbRepairData, dbProdutosElectrex }; // dbBancaElectrex
 
    /* erros são nativamente manipulados em ExpressJS 5.0
    } catch (error) {

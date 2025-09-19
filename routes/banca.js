@@ -1,14 +1,12 @@
-module.exports = (dbRepairData) => {
+module.exports = (dbBancaData) => {
    const express = require('express');
    const router = express.Router();
    const handleError = require('../utils/handleError');
 
 
-   // Middleware to ensure DB connection
-   router.use(async (req, res, next) => {
-      await connectDB(req.router.locals.client);
-      next();
-   });
+
+   // Middleware para assegurar conexão à DB
+   router.use(async (req, res, next) => { next(); });
 
    // |----- ENDPOINTS DE BUSCA -----|
 

@@ -19,7 +19,7 @@ const credRoutes = require('./routes/cred'); // -------------------------- Módu
 const feriasRoutes = require('./routes/ferias'); // ---------------------- Módulo para aplicação JRMFérias
 const repairRoutes = require('./routes/repair'); // ---------------------- Módulo para aplicação RepairGest v2
 const epmRoutes = require('./routes/epm'); // ---------------------------- Módulo para aplicação ElectrexProductManager
-const bRoutes = require('./routes/banca'); // ---------------------------- Módulo para aplicação <app testes banca de carga>
+//const bRoutes = require('./routes/banca'); // -------------------------- Módulo para aplicação <app testes banca de carga>
 //const handleError = require('./utils/handleError'); // ----------------- Util para handling de erros
 const getCurrentDateTime = require('./utils/currentTime') // ------------- Util simples para obter hora atual
 
@@ -74,7 +74,7 @@ async function connectToMongoDB() {
    dbJRMFerias = client.db('JRMFerias');
    dbRepairData = client.db('Repair');
    dbProdutosElectrex = client.db('ProdutosElectrex');
-   //dbBancaElectrex = client.db('Banca');
+   // dbBancaElectrex = client.db('Banca');
 
    // Testar conexões
    console.log(`${getCurrentDateTime()}`);

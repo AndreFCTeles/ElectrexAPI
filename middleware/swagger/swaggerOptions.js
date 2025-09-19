@@ -7,7 +7,7 @@ const swaggerOptions = {
       openapi: '3.1.0',
       info: {
          title: 'João R. Matos - API',
-         version: '1.0.0',
+         version: '1.1.0',
          description: 'Documentação para a API que serve as diferentes aplicações Electrex',
       },
       tags: [
